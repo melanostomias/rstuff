@@ -1,0 +1,23 @@
+"Continent","Count"
+"north america",39554
+"south america",23387
+"asia",17082
+"oceania",4604
+"africa",1685
+"europe",1305
+"australia",187
+"oceania*",100
+"oceania?",32
+"central america*",26
+"europe*",24
+"north america*",24
+"south america*",22
+"asia*",20
+"antarctica",19
+"north america*?",6
+"africa*",5
+"south america*?",3
+"africa*?",1
+"australia*",1
+"australia?",1
+"west indies*",1
