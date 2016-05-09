@@ -1,0 +1,408 @@
+"Country","Count"
+"ocean pacifique",15200
+"nouvelle-caledonie",10000
+"guyane francaise",6032
+"france",5763
+"madagascar",4927
+"bresil",3814
+"vanuatu",3473
+"kerguelen(i.)",2627
+"inconnu",2435
+"guinee",2396
+"indonesie",2350
+"bolivie",2104
+"senegal",2043
+"congo",1920
+"philippines",1836
+"cote d'ivoire",1830
+"cameroon",1672
+"polynesie",1658
+"salomon(i.)",1619
+"inde",1585
+"polynésie française",1516
+"australie",1384
+"etats-unis",1355
+"vietnam",1337
+"gabon",1327
+"antilles",1305
+"chine",1262
+"cambodge",1180
+"ocean atlantique nord-est",1070
+"reunion(i.)",1069
+"maroc",1039
+"rep democratique du congo",1020
+"egypte",1001
+"antarctique",998
+"mali",926
+"mer rouge",916
+"republique centrafricaine",811
+"nouvelle-calédonie",806
+"chesterfield(i.)",799
+"tchad",792
+"hawaii(i.)",791
+"ocean indien",789
+"maurice(i.)",773
+"ocean austral",768
+"ocean antarctique",733
+"united states",724
+"mauritanie",706
+"angola",635
+"mexique",630
+"grece",602
+"fidji(i.)",565
+"algerie",546
+"acores(i.)",535
+"italie",527
+"russie",504
+"japon",501
+"cap-vert(i.)",496
+"ocean atlantique nord",492
+"crozet(i.)",478
+"sierra leone",453
+"seychelles(i.)",452
+"loyaute(i.)",448
+"mer de weddell",444
+"chili",430
+"togo",430
+"thailande",413
+"ocean pacifique sud-ouest",405
+"afrique du sud",392
+"wallis et futuna",384
+"burkina faso",383
+"tunisie",379
+"benin",364
+"afrique",361
+"equateur",361
+"venezuela",346
+"sicile(i.)",342
+"espagne",335
+"syrie",332
+"ghana",331
+"papouasie-nouvelle-guinee",329
+"perou",309
+"mayotte",304
+"israel",298
+"amsterdam(i.)",297
+"ocean atlantique",278
+"laos",276
+"mer mediterranee",272
+"marshall(i.)",269
+"roumanie",268
+"mer des indes",265
+"golfe de californie",254
+"nigeria",244
+"canaries(i.)",238
+"tanzanie",238
+"argentine",225
+"turquie",224
+"djibouti",219
+"canada",217
+"golfe de guinee",216
+"saint-paul(i.)",214
+"taiwan",214
+"chausey(i.)",189
+"ocean indien sud",186
+"surinam",185
+"kenya",181
+"pays-bas",175
+"oman",173
+"colombie",171
+"clipperton(i.)",167
+"ethiopie",166
+"norfolk(i.)",164
+"malaisie",155
+"liberia",150
+"saint-paul et amsterdam",149
+"malawi",146
+"mer d'alboran",146
+"amerique",145
+"golfe de tadjoura",143
+"nouvelle-zelande",141
+"portugal",139
+"niger",135
+"aldabra(i.)",134
+"golfe de gascogne",134
+"guadeloupe",131
+"golfe d'aqaba",130
+"soudan",130
+"madere(i.)",129
+"mariannes(i.)",128
+"sri lanka",128
+"congo-gabon",124
+"malouines(i.)",124
+"ocean atlantique tropical",123
+"ocean atlantique nord-ouest",121
+"uruguay",121
+"golfe ibero-marocain",120
+"melanesie",116
+"allemagne",109
+"comores",108
+"chypre",107
+"mer egee du nord",103
+"norvege",103
+"baleares(i.)",102
+"heard(i.)",95
+"guyana",94
+"birmanie",89
+"suede",88
+"golfe du mexique",87
+"burundi",86
+"panama",82
+"golfe du bengale",75
+"golfe d'oman",74
+"somalie",74
+"irlande",73
+"annobon(i.)",72
+"martinique",70
+"ocean atlantique sud-est",69
+"tchecoslovaquie",69
+"golfe du siam",67
+"namibie",67
+"ukraine",67
+"zambie",67
+"erythree",64
+"guinee-bissau",64
+"galapagos(i.)",61
+"sainte-helene(i.)",61
+"golfe d'aden",60
+"ouganda",60
+"shetland du sud(i.)",60
+"islande",53
+"ocean pacifique ouest",53
+"guatemala",51
+"lac victoria",51
+"groenland",50
+"liban",49
+"bouvet(i.)",47
+"yougoslavie",47
+"pakistan",45
+"ascension(i.)",44
+"autriche",43
+"mozambique",42
+"royaume-uni",40
+"suisse",39
+"saint-pierre et miquelon",38
+"malte(i.)",37
+"ocean atlantique centre est",36
+"orcades du sud(i.)",35
+"micronesie",34
+"belize",32
+"guinee equatoriale",32
+"oceanie",31
+"paraguay",31
+"prince-edouard(i.)",31
+"iran",30
+"coree",27
+"golfe de panama",27
+"lac tanganyika",27
+"gambie",26
+"mongolie",25
+"guinee bissau",24
+"mer de bering",24
+"singapour",24
+"vierges(i.)",24
+"iraq",23
+"samoa(i.)",23
+"chagos(arch.)",22
+"paques(i.)",22
+"salvador",22
+"ocean atlantique est",21
+"ocean pacifique nord",21
+"papouasie",21
+"sao tome(i.)",21
+"belgique",20
+"ocean pacifique tropical",20
+"yemen",20
+"kazakhstan",19
+"mer de barents",19
+"golfe persique",17
+"indes orientales",17
+"mer des caraibes",17
+"canal de suez",16
+"canal du mozambique",16
+"feroe(i.)",16
+"finlande",16
+"indochine",16
+"mer egee",16
+"albanie",14
+"georgie du sud(i.)",14
+"fédération de russie",13
+"maldives(i.)",13
+"mer noire",13
+"slovaquie",13
+"mer d'irlande",12
+"mer des sargasses",12
+"mer du nord",12
+"palau",12
+"arabie saoudite",11
+"bermudes(i.)",11
+"golfe d'alaska",11
+"manche",11
+"mer baltique",11
+"micronésie",11
+"nicaragua",11
+"scandinavie",11
+"laos siamois",10
+"perou-bolivie",10
+"golfe de gabes",9
+"golfe de l'alaska",9
+"golfe evoikos",9
+"mer de kara",9
+"ocean pacifique est",9
+"zimbabwe",9
+"cabinda",8
+"guinée conakry",8
+"johnston(i.)",8
+"mer caspienne",8
+"andaman(i.)",7
+"argentine/chili",7
+"golfe de carpentarie",7
+"mer adriatique",7
+"mer d'oman",7
+"mer ionienne",7
+"mers du sud",7
+"ocean pacifique nord-est",7
+"ocean pacifique sud",7
+"pologne",7
+"spitzberg(i.)",7
+"armenie",6
+"carolines(i.)",6
+"cook(i.)",6
+"danemark",6
+"golfe de tunis",6
+"golfe du tonkin",6
+"indo-malaisie",6
+"libye",6
+"ocean indien sud-ouest",6
+"principe(i.)",6
+"coree du sud",5
+"golfe de genes",5
+"juan fernandez(i.)",5
+"mer de chine",5
+"mer de norvège",5
+"moldavie",5
+"sandwich du sud(i.)",5
+"bahamas(i.)",4
+"bulgarie",4
+"chypre(i.)",4
+"comores(arch.)",4
+"costa rica",4
+"falkland(i.)",4
+"golfe du benin",4
+"line(i.)",4
+"mer des moluques",4
+"mer egee du sud",4
+"mer morte",4
+"ocean atlantique ouest",4
+"ocean atlantique sud",4
+"ocean indien ouest",4
+"ocean pacifique sud-est",4
+"republique tcheque",4
+"amerique du sud",3
+"australes(i.)",3
+"bangladesh",3
+"burkina faso-cote d'ivoire",3
+"cote d'ivoire-liberia",3
+"dawson(i.)",3
+"detroit de malacca",3
+"estonie",3
+"futuna(i.)",3
+"golfe d'alexandretta",3
+"indo-pacifique",3
+"lac maracaibo",3
+"lituanie",3
+"madagasacar",3
+"matthew et hunter(i.)",3
+"mer d'andaman",3
+"mer de sarcosa",3
+"mer des celebes",3
+"mer du sud",3
+"taaf",3
+"tonga(i.)",3
+"afghanistan",2
+"cayman(i.)",2
+"cuba",2
+"gibraltar",2
+"golfe de gaete",2
+"golfe de thessaloniki",2
+"golfe evoikos du nord",2
+"honduras",2
+"kermadec(i.)",2
+"laponie",2
+"laquedives(i.)",2
+"macquarie(i.)",2
+"mer d'arafura",2
+"mer d'australie",2
+"mer de corail",2
+"ocean arctique",2
+"ocean indien nord",2
+"ocean indo pacifiqua",2
+"ouest mediterranee",2
+"palestine",2
+"pays des comalis",2
+"pitcairn(i.)",2
+"revillagigedo(i.)",2
+"rodriguez(i.)",2
+"territoire antarctique brit.",2
+"tond(i.)",2
+"turkestan",2
+"adriatique",1
+"afrique du nord",1
+"angleterre",1
+"arrow(i.)",1
+"auckland(i.)",1
+"bahrein",1
+"banquereau",1
+"bentam",1
+"botswana",1
+"bresil ou guyane",1
+"cap erio",1
+"chenal des sablettes",1
+"chili ou perou",1
+"chine ou japon",1
+"colombie-venezuela",1
+"fishing banks",1
+"flores(i.)",1
+"georgie",1
+"golfe arabique",1
+"golfe de bohai",1
+"golfe de burton",1
+"golfe de la patience",1
+"golfe de smyrne",1
+"golfe evoikos sud",1
+"grand namaquois",1
+"guyane française",1
+"hongrie",1
+"indes anglaises",1
+"indes neerlandaises",1
+"indes occidentales",1
+"lac huleh",1
+"lac isabal",1
+"lac leman",1
+"lac parino",1
+"lac titicaca",1
+"laos chinois",1
+"las rolas",1
+"mer celtique",1
+"mer de ross",1
+"mer de scotia",1
+"mer de timor",1
+"mer du labrador",1
+"mers australes",1
+"midway(i.)",1
+"noble island",1
+"nouvelle-amsterdam",1
+"ocean atlantique intertropical",1
+"ocean atlantique sud-ouest",1
+"ocean equinoxial",1
+"pohnpei",1
+"republique de buriatie",1
+"rodrigues",1
+"saint-domingue et haiti",1
+"santa carolina",1
+"sarawak",1
+"swallow",1
+"tanykeli",1
+"tasmanie",1
+"turkmenistan",1
+"valparaiso",1
