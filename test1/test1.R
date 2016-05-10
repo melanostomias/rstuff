@@ -29,9 +29,7 @@ write.csv(rsDF,file = "idb-recordsets-RAW.csv",row.names = FALSE)
 ## Find the fish collections
 ## looking for "fish" or "ichthy" in the collection name first
 
-rsDF <- rbind(rsDF[grep("fish",rsDF$name),],rsDF[grep("fish",rsDF$name),])
-##Dupes for some reason
-rsDF <- rsDF[!duplicated(rsDF$uuid),]
+rsDF <- rbind(rsDF[grep("fish",rsDF$name),],rsDF[grep("ichthy",rsDF$name),])
 write.csv(rsDF, file = "idb-fish-MAYBE.csv",row.names = FALSE)
 
 
