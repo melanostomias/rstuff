@@ -1,0 +1,881 @@
+"Waterbody","Count"
+"maroni",2279
+"niger",1789
+"amazone",1689
+"congo",1277
+"l.tchad",1023
+"oyapock",803
+"mekong",662
+"senegal",660
+"ogooue",631
+"sinnamary",578
+"itenez",546
+"nil",541
+"volta",505
+"seine",483
+"bandama",434
+"kapuas",428
+"konkoure",421
+"approuague",413
+"kouilou",408
+"sanaga",365
+"kolente",350
+"mana",343
+"rio mamore",335
+"rhone",317
+"loire",299
+"yang tse k.",276
+"orenoque",275
+"yata",261
+"danube",253
+"me nam",242
+"comoe",230
+"sassandra",230
+"zambeze",216
+"mamoré",213
+"mississippi",205
+"gambie",199
+"mono",196
+"fleuve rouge",192
+"kaw",182
+"ntem",176
+"madeira",173
+"cavally",170
+"oueme",163
+"pte scarcies",160
+"rhin",156
+"rio do para",148
+"cayenne",145
+"saint-laurent",143
+"asi",142
+"loeme",131
+"kourou",130
+"l.titicaca",130
+"garonne",127
+"guapore",126
+"lac victoria",125
+"song cai",123
+"nyong",119
+"l.biwa ko",115
+"orthon",115
+"echira",111
+"l.baikal",111
+"cestos",109
+"fatala",107
+"rio la plata",104
+"rabi",101
+"gange",90
+"comte",89
+"araguari",84
+"orapu",80
+"corubal",78
+"jong",77
+"rokel",77
+"vouri",75
+"po",72
+"pra",72
+"b.de delaware",71
+"adour",69
+"lag.ebrie",65
+"moa",64
+"sewa",61
+"g.du lion",60
+"mahury",60
+"cross",59
+"moulouya",58
+"pampana",58
+"ouanary",57
+"sao francisco",56
+"bofon",55
+"kogon",55
+"noumbi",53
+"somme",53
+"saint-paul",52
+"oumer rbia",51
+"sebou",50
+"bia",48
+"rio santiago",48
+"elbe",47
+"seli",47
+"essequibo",46
+"g.thermaikos",43
+"okavango",43
+"l.rodolphe",42
+"me",41
+"mingkiang",41
+"sakarya",40
+"volga",40
+"parana",39
+"l.issyk kul",38
+"gironde",37
+"lag.cotonou",37
+"m'bari",37
+"ogouué",37
+"san pedro",37
+"rio negro",36
+"cuanza",35
+"dumbea",35
+"irraouaddi",35
+"jari",35
+"songolo",35
+"swan",35
+"tensift",35
+"lag.aby",34
+"agly",33
+"rhône",33
+"l.maracaibo",32
+"tiwaka",32
+"kongwati",31
+"onilahy",31
+"suriname",31
+"tone",31
+"axios",30
+"napoemien",30
+"rio",30
+"chott melghir",28
+"loffa",28
+"mananara",28
+"lokoundje",27
+"carsevenne",26
+"guanza",26
+"ob",26
+"oueiep",26
+"boubo",25
+"amapa grande",24
+"baram",24
+"dvina",24
+"l.togo",24
+"madre de dios",24
+"meuse",24
+"potomac",24
+"rio pirogues",24
+"la foa",23
+"murray",23
+"santee",23
+"sous",23
+"tite",23
+"tech",22
+"tibre",22
+"nyanga",21
+"saint-john",21
+"lag.tadio",20
+"casamance",19
+"iracoubo",19
+"kribi",19
+"l.de bizerte",19
+"mc curtain",19
+"northwest bay",19
+"thai binh",19
+"tomine",19
+"canal de suez",18
+"diahot",18
+"escaut",18
+"l.dalai nor",18
+"rio grande",18
+"soumba",18
+"tage",18
+"athi",17
+"inini",17
+"tabou",17
+"ikopa",16
+"l.izabal",16
+"orne",16
+"tenasserim",16
+"tibarama",16
+"yarra",16
+"ziz",16
+"agnebilekrou",15
+"arno",15
+"aude",15
+"chiloango",15
+"g.de santiago",15
+"kansas",15
+"neuse",15
+"rio ayampe",15
+"yiyi",15
+"balkhach",14
+"bengo",14
+"euphrate",14
+"kabala",14
+"magdalena",14
+"nidia",14
+"saramacca",14
+"b.de mobile",13
+"capot",13
+"cauvery",13
+"gr. scarcies",13
+"kola",13
+"lez",13
+"nera",13
+"biredjik",12
+"charente",12
+"g.du drin",12
+"l.kinkony",12
+"ouebi chibeli",12
+"pasvik",12
+"ravine du gol",12
+"renner",12
+"strymon",12
+"chad",11
+"dordogne",11
+"dothio",11
+"gila",11
+"hienghene",11
+"koura",11
+"massane",11
+"mene",11
+"neva",11
+"nipe",11
+"roanoke",11
+"zousfana",11
+"amou daria",10
+"arataye",10
+"g.du mexique",10
+"kahayan",10
+"lac tanganyika",10
+"madeleine",10
+"niari",10
+"norman",10
+"nueces",10
+"papaloapan",10
+"paraiba",10
+"pongola",10
+"têt",10
+"ucayali",10
+"al khabour",9
+"amazonas",9
+"benoue",9
+"cimaruco",9
+"el melah",9
+"g.guayaquil",9
+"kais",9
+"koumac",9
+"l.ampahana",9
+"l.poopo",9
+"negrope",9
+"orénoque",9
+"panui",9
+"perak",9
+"susquehanna",9
+"taharuu",9
+"awash",8
+"bandiala",8
+"barito",8
+"bolamo",8
+"doce",8
+"evros",8
+"kakrima",8
+"l.albufera",8
+"l.erie",8
+"mahakam",8
+"nehu",8
+"noun",8
+"pongo",8
+"richmond",8
+"rio guarumo",8
+"riv.cygnes",8
+"saint-johns",8
+"san benito",8
+"si kiang",8
+"tocantins",8
+"akaki",7
+"al abrache",7
+"amoss",7
+"ba",7
+"balade",7
+"balsas",7
+"batang hari",7
+"caricouie",7
+"chao phraya",7
+"chari",7
+"cunene",7
+"dnestr",7
+"dra",7
+"galana",7
+"guadiana",7
+"harrach",7
+"ivoloina",7
+"kango",7
+"l.balkhach",7
+"l.bizerte",7
+"l.tonle sap",7
+"l.volvi",7
+"lag.nkomi",7
+"langevin",7
+"nero",7
+"oue thaboua",7
+"petit coulis",7
+"pinios",7
+"quanza",7
+"rajang",7
+"song koi",7
+"amour",6
+"ayampe",6
+"batanghari",6
+"berre",6
+"beth",6
+"boghen",6
+"candelaria",6
+"endau",6
+"giuba",6
+"grijalva",6
+"hudson",6
+"koghi",6
+"krishna",6
+"l.koronia",6
+"limpopo",6
+"louros",6
+"mahavavy",6
+"massa",6
+"medjerda",6
+"musi",6
+"niero",6
+"ouaieme",6
+"phagaagy",6
+"poya",6
+"rembo-nkomi",6
+"riv.pilote",6
+"sacramento",6
+"salamat",6
+"sambirano",6
+"tafna",6
+"tigre",6
+"var",6
+"watmansabai",6
+"aliakmon",5
+"approuague?",5
+"b.d'along",5
+"bravo norte",5
+"buèges",5
+"carnaveral r.",5
+"chott el arab",5
+"colorado",5
+"escambia",5
+"faraony",5
+"gallikos",5
+"inkisi",5
+"irtysh",5
+"kemer",5
+"kone",5
+"l.chapala",5
+"l.el palmito",5
+"lezarde",5
+"litani",5
+"lucala",5
+"mani",5
+"maputo",5
+"niouniourou",5
+"ogooué",5
+"ouenghi",5
+"pouembout",5
+"rio daule",5
+"seyhan",5
+"syr daria",5
+"tamise",5
+"usumacinta",5
+"vaiataratoa",5
+"vardar",5
+"araguaia",4
+"argens",4
+"b.buzzards",4
+"benito",4
+"berbice",4
+"courie",4
+"eyre",4
+"grande leyre",4
+"ica",4
+"indragiri",4
+"kiddi kiddi",4
+"kienke",4
+"l.de gatun",4
+"l.huron",4
+"lag.tagba",4
+"manambao",4
+"nefifick",4
+"nipoue",4
+"obitsu",4
+"ouamenie",4
+"p.tapcheang",4
+"petschora",4
+"prek tnoh",4
+"prunelli",4
+"pwameju",4
+"san juan",4
+"sperkhios",4
+"tana",4
+"temala",4
+"voh",4
+"alabama",3
+"anambra",3
+"antenambalana",3
+"aouach",3
+"apoomau",3
+"apurimac",3
+"arian coupang",3
+"ave",3
+"bassac",3
+"besirck",3
+"bolomba",3
+"bongola",3
+"bou regreg",3
+"brazos",3
+"calçoene",3
+"cassipore",3
+"cherrat",3
+"chira",3
+"compte",3
+"comté-orapu",3
+"davo",3
+"esmeraldas",3
+"font estramar",3
+"g.kassandra",3
+"g.toroneos",3
+"guayas",3
+"hawkesbury",3
+"herault",3
+"ivindo",3
+"jamuna",3
+"jarama",3
+"jourdain",3
+"kajan",3
+"kokengone",3
+"komo",3
+"korinthiakos",3
+"l.abbe",3
+"l.hulel",3
+"l.kariba",3
+"l.metecho",3
+"lag.ascotan",3
+"lag.limao",3
+"lag.nokoue",3
+"lekoudi",3
+"lembi",3
+"lobe",3
+"louanga",3
+"macouria",3
+"mangoro",3
+"marimbo",3
+"marne",3
+"missira",3
+"mungo",3
+"nickerie",3
+"nzi",3
+"oder",3
+"pamisos",3
+"prek tasom",3
+"reno",3
+"rio chillon",3
+"rio de la pasion",3
+"risle",3
+"sahabe",3
+"santiago",3
+"stung pursat",3
+"taia",3
+"tenryu",3
+"trotoha",3
+"vahuaru",3
+"vaiapu",3
+"vistule",3
+"we yo",3
+"yarmok",3
+"adjim",2
+"akhtouba",2
+"alfios",2
+"altamaha",2
+"ampasina",2
+"andevoranto",2
+"arghiro",2
+"b.cansado",2
+"b.d'antongil",2
+"b.d'hudson",2
+"b.de canala",2
+"b.de marajo",2
+"b.mahajamba",2
+"b.saint-paul",2
+"b.san antonio",2
+"b.san pablo",2
+"bakora",2
+"barkol",2
+"berau",2
+"brantas",2
+"bresle",2
+"caimito",2
+"casma",2
+"chacalapa",2
+"cheliff",2
+"columbia",2
+"cook",2
+"coppename",2
+"coula",2
+"crati",2
+"deseado",2
+"dong-nai",2
+"ebre",2
+"ech chergui",2
+"etowah",2
+"etsingol",2
+"falleron",2
+"filiouri",2
+"flexal",2
+"g.amvrakikos",2
+"g.de gascogne",2
+"g.de siam",2
+"g.de st.malo",2
+"geba",2
+"gediz chai",2
+"golo",2
+"gourits",2
+"gt. scarcies",2
+"hangang",2
+"hondoui",2
+"hérault",2
+"indus",2
+"isukechi",2
+"jeba",2
+"kassai",2
+"kayan",2
+"kum",2
+"kwatea",2
+"l.itasy",2
+"l.nyassa",2
+"l.ontario",2
+"l.oubeira",2
+"l.stephanie",2
+"l.vistonis",2
+"lag.motacusal",2
+"ligneron",2
+"lokunje",2
+"mangarahara",2
+"miahakam",2
+"mira",2
+"mississaugi",2
+"mornos",2
+"morondava",2
+"mullins",2
+"nagualale",2
+"nam theun",2
+"namota",2
+"napwéimié",2
+"neami",2
+"nehu-we wick",2
+"neretva",2
+"nestos",2
+"ngo",2
+"nunez",2
+"nuon",2
+"nushagak",2
+"ogooue-ngounié",2
+"ogoue",2
+"orange",2
+"oronte",2
+"oue tchaboua",2
+"purari",2
+"pwe wgaweng",2
+"rasul",2
+"revue",2
+"rianila",2
+"rio de mai",2
+"rio paraguai",2
+"rio sulimues",2
+"riv. de cayenne",2
+"riv.marsouins",2
+"rivière salée",2
+"rotouma",2
+"sakugawa",2
+"saloum",2
+"sangkan",2
+"saone",2
+"seruyan",2
+"sio",2
+"soanierana",2
+"soraia",2
+"soummam",2
+"são francisco",2
+"sèvre niortaise",2
+"tajo",2
+"tamoa",2
+"todje",2
+"tongobory",2
+"tumbes",2
+"vahiria",2
+"vaiaau",2
+"vaiao",2
+"vaiharuru",2
+"vigirima",2
+"yala",2
+"agano-gawa",1
+"aggitis",1
+"agusam",1
+"ahome",1
+"aira",1
+"alleghany",1
+"alto parana",1
+"ambilli",1
+"ampataka",1
+"anaguabo",1
+"andranofotsy",1
+"ankalobe",1
+"apalla",1
+"aras",1
+"archeloos",1
+"arkansas",1
+"ateu",1
+"attamaha",1
+"atuona",1
+"b.botany",1
+"b.chesapeake",1
+"b.copano",1
+"b.d'authie",1
+"b.d'hobson",1
+"b.d'ungava",1
+"b.indian",1
+"b.marble",1
+"b.moreton",1
+"b.perdido",1
+"b.quincy",1
+"b.st-vincent",1
+"b.suruga",1
+"baakens",1
+"bagbe",1
+"bandana",1
+"bann",1
+"bemarivo",1
+"beni",1
+"billiton",1
+"bristol(b.)",1
+"buzi",1
+"cacheu",1
+"caculovar",1
+"camopi",1
+"campo",1
+"canche",1
+"carpentarie",1
+"ceara",1
+"chebeli",1
+"cher",1
+"chilia",1
+"chubut",1
+"conches",1
+"cooper",1
+"courtis",1
+"cr.changement",1
+"cr.malmanoury",1
+"cunani",1
+"danau biru",1
+"debbanc",1
+"delaware",1
+"demerara",1
+"derwent",1
+"detr.d'hudson",1
+"detr.de tiran",1
+"detr.malacca",1
+"diougou",1
+"djouba",1
+"dniepr",1
+"don",1
+"doumvou",1
+"douro",1
+"douve",1
+"duero",1
+"dyje",1
+"eboundja",1
+"echedoros",1
+"elorn",1
+"esole",1
+"fausse yate",1
+"fiherenane",1
+"forcados",1
+"fortore",1
+"fuerte",1
+"g.cambridge",1
+"g.d'aden",1
+"g.de suez",1
+"g.de tadjoura",1
+"g.du morbihan",1
+"g.salonique",1
+"gabon",1
+"gallego",1
+"gamtoos",1
+"gapeau",1
+"georgie",1
+"gingi",1
+"guadalquivir",1
+"guama",1
+"guir",1
+"helford",1
+"hooghly",1
+"hosoda",1
+"inle",1
+"itabapoana",1
+"jaguaribe",1
+"jalle de l'horte",1
+"jamieson",1
+"juan diaz",1
+"kabalebo",1
+"kamchay",1
+"kikori",1
+"kinabatangan",1
+"kiss",1
+"komering",1
+"kranji",1
+"kuala lumpur",1
+"kuen songoung",1
+"kumba",1
+"l.abitibi",1
+"l.diana",1
+"l.edouard",1
+"l.ellesmere",1
+"l.fitri",1
+"l.kamamba",1
+"l.kisale",1
+"l.ladoga",1
+"l.lob nor",1
+"l.michigan",1
+"l.niriz",1
+"l.portonovo",1
+"l.tule",1
+"l.waskesin",1
+"la coule",1
+"la loffa",1
+"la ouaiep",1
+"lac volta",1
+"lag.anecho",1
+"lag.bato",1
+"lag.cahoul",1
+"lag.cau hai",1
+"lag.el cuyo",1
+"lag.lahou",1
+"lag.venise",1
+"lag.zambi",1
+"lagoa patos",1
+"lane cove",1
+"lima",1
+"livenne",1
+"loango",1
+"lodell",1
+"logone",1
+"lorentz",1
+"lot",1
+"loya",1
+"makona",1
+"manangoza",1
+"mananjary",1
+"manche",1
+"mandu-mandu",1
+"maques",1
+"mara",1
+"marecchia",1
+"maringory",1
+"marowijne",1
+"mayoumba",1
+"menderes",1
+"menzel-horr",1
+"mer glaciale",1
+"miliane",1
+"min kiang",1
+"mooro",1
+"motacusal",1
+"mulege",1
+"naamann",1
+"nagal",1
+"napouémien",1
+"naruma",1
+"negro",1
+"nehoue",1
+"nith",1
+"north kan",1
+"nzeme",1
+"oclemari",1
+"odelouga",1
+"olifants",1
+"omi",1
+"omo",1
+"opunohu",1
+"orb",1
+"osse",1
+"owena",1
+"p.meat andor",1
+"paaumea",1
+"pai-ho",1
+"pangani",1
+"paraguay",1
+"paraná",1
+"parnaiba",1
+"pastaza",1
+"platte",1
+"podor",1
+"pouo",1
+"pourina",1
+"prek andor",1
+"prek talem",1
+"prek tapa",1
+"puget sound",1
+"pushmataha",1
+"qua iboe",1
+"rangoon",1
+"rhaabini",1
+"ribeira",1
+"rio jequetepe",1
+"rio marapanim",1
+"rio puyango",1
+"rio solimoes",1
+"rio verde",1
+"riv.cayenne",1
+"riv.de saigon",1
+"riv.pual",1
+"riv.vatable",1
+"rovuma",1
+"rusne",1
+"ryanile",1
+"sado",1
+"sakita",1
+"sampit",1
+"sangha",1
+"sarthe",1
+"saskatchewan",1
+"schaalsee",1
+"scorff",1
+"sebka d'oran",1
+"segre",1
+"segura",1
+"sena otway",1
+"seulles",1
+"shimoyama",1
+"siak",1
+"silofer",1
+"siluko",1
+"simulao",1
+"solo",1
+"song chu",1
+"song da",1
+"songkhla",1
+"south kan",1
+"st-augustin",1
+"suripa",1
+"swan river",1
+"tamwa",1
+"tano",1
+"tapajos",1
+"taravo",1
+"tavignano",1
+"tchimali",1
+"tehuantepec",1
+"tehuru",1
+"tisa",1
+"torrens",1
+"touques",1
+"tsiribihina",1
+"tuk chou",1
+"u fium'orbu",1
+"vidourle",1
+"vieux rhin",1
+"vilaine",1
+"vire",1
+"wagonga",1
+"waite bu taka",1
+"warnow",1
+"we tchaouen",1
+"winnipeg",1
+"xe bangfai",1
+"yaqui",1
+"ykem",1
