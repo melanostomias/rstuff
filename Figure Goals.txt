@@ -1,0 +1,34 @@
+Figures (n=30 US collections):
+
+-Breakdown of collections by # of records (bar graph)
+               X axis = ASIH code
+               Y axis = # of records
+
+-Breakdown of collections by # of specimens (bar graph)
+             X axis = ASIH code
+             Y axis = # of specimens (in millions)
+
+-Records added per year (bar graph for 1 sample year)
+             X axis = ASIH code
+             Y axis = # of records (date = that year)
+      
+-Breakdown of prep types by institution (Pie Chart)
+           % of each type....look into the N/A thing 
+           One for each collection
+
+-Countries associated with each collection (Pie Chart)
+           % records by country 
+           One for each collection
+
+-Drainage associated with each collection (Pie Chart)
+           % records by country 
+           One for each collection
+
+-Breakdown of number of families in collection (bar graph)
+               X axis = ASIH code
+               Y axis = # of families
+
+-Top 10 collector contributions (bar graph)
+               X axis = collector abbrev/name
+               Y axis = # records by collector
+           One for each collection
