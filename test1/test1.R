@@ -39,6 +39,8 @@ write.csv(rsDF, file = "idb-fish-MAYBE.csv",row.names = FALSE)
 bd <- read.csv("../vocab/ASIH_Codes_UUID.csv")
 for (i in 1:length(bd$uuid)) {
         dir.create(as.character(bd$ASIHCode[i]))
+        dir.create(paste(as.character(bd$ASIHCode[i]),"/data",sep = ""))
+        dir.create(paste(as.character(bd$ASIHCode[i]),"/figures",sep = ""))
 }
 
 ## Let's work on summary by family
@@ -62,68 +64,79 @@ pb <- progress_bar$new(total = length(bbRS$institutioncode))
 for(i in 1:length(bbRS$ASIHCode))
 {
         pb$tick()
-        gop <- merge(bbD,stdPreps,by="preps",all.x = TRUE)
-        
+        aaaa <- bbRS[bbRS$ASIHCode==bbRS$ASIHCode[i],]
+        ASIHcode <- unique(aaaa$ASIHCode)
+        recordset <- if(length(bbRS$recordset) > 1){URLencode(toJSON(as.character(bbRS$recordset)))}else{paste("%22",URLencode(as.character(bbRS$recordset)),"%22",sep="")}
         #Summary by Family
-        famsJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:%22",URLencode(as.character(bbRS$recordset[i])),"%22}&top_fields=[%22family%22]&count=5000",sep=""))
+        famsJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,"}&top_fields=[%22family%22]&count=5000",sep=""))
         famDF <- data.frame(Family=names(famsJS$family),Count=unlist(famsJS$family),row.names = NULL)
-        write.csv(famDF, file = paste(bbRS$ASIHCode[i],"/",bbRS$collectioncode[i],"-RAW_famlies.csv",sep=""),row.names = FALSE)
+        write.csv(famDF, file = paste(ASIHcode,"/data/",ASIHcode,"-RAW_famlies.csv",sep=""),row.names = FALSE)
         #Summary by Preptype
-        gop <- gop[gop$recordset==bbRS$recordset[i],]
-        write.csv(gop, file = paste(bbRS$ASIHCode[i],"/",bbRS$collectioncode[i],"-RAW_preps.csv",sep=""),row.names = FALSE )
+        
+        pog <- gop[gop$recordset %in% aaaa$recordset,]
+        write.csv(pog, file = paste(ASIHcode,"/data/",ASIHcode,"-RAW_preps.csv",sep=""),row.names = FALSE )
         
         
         #Gonna create some better summary data from the raw data we have
         
-        ppp <- read.csv(paste(bbRS$ASIHCode[i],"/",bbRS$collectioncode[i],"-RAW_preps.csv",sep=""))
+        ppp <- read.csv(paste(ASIHcode,"/data/",ASIHcode,"-RAW_preps.csv",sep=""))
         ppp$freq <- NULL
         cppp <- plyr::count(ppp,"Stand.Prep")
         cppp <- cppp[order(-cppp$freq),]
-        write.csv(cppp, file = paste(bbRS$ASIHCode[i],"/",bbRS$collectioncode[i],"-sum_preps.csv",sep=""),row.names = FALSE )
+        write.csv(cppp, file = paste(ASIHcode,"/data/",ASIHcode,"-sum_preps.csv",sep=""),row.names = FALSE )
         
         
         
         #Locality summaries
         # "continent","country","waterbody"
-        contJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:%22",URLencode(as.character(bbRS$recordset[i])),"%22}&top_fields=[%22continent%22]&count=5000",sep=""))
-        conJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:%22",URLencode(as.character(bbRS$recordset[i])),"%22}&top_fields=[%22country%22]&count=5000",sep=""))
-        watJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:%22",URLencode(as.character(bbRS$recordset[i])),"%22}&top_fields=[%22waterbody%22]&count=5000",sep=""))
+        contJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,"}&top_fields=[%22continent%22]&count=5000",sep=""))
+        conJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,"}&top_fields=[%22country%22]&count=5000",sep=""))
+        watJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,"}&top_fields=[%22waterbody%22]&count=5000",sep=""))
         
         contDF <- data.frame(Continent=names(contJS$continent),Count=unlist(contJS$continent),row.names = NULL)
         conDF <- data.frame(Country=names(conJS$country),Count=unlist(conJS$country),row.names = NULL)
         watDF <- data.frame(Waterbody=names(watJS$waterbody),Count=unlist(watJS$waterbody),row.names = NULL)
         
         
-        write.csv(contDF, file=paste(bbRS$ASIHCode[i],"/",bbRS$collectioncode[i],"-RAW_continents.csv",sep=""),row.names = FALSE)
-        write.csv(conDF, file=paste(bbRS$ASIHCode[i],"/",bbRS$collectioncode[i],"-RAW_countries.csv",sep=""),row.names = FALSE)
-        write.csv(watDF, file=paste(bbRS$ASIHCode[i],"/",bbRS$collectioncode[i],"-RAW_waterbodies.csv",sep=""),row.names = FALSE)
+        write.csv(contDF, file=paste(ASIHcode,"/data/",ASIHcode,"-RAW_continents.csv",sep=""),row.names = FALSE)
+        write.csv(conDF, file=paste(ASIHcode,"/data/",ASIHcode,"-RAW_countries.csv",sep=""),row.names = FALSE)
+        write.csv(watDF, file=paste(ASIHcode,"/data/",ASIHcode,"-RAW_waterbodies.csv",sep=""),row.names = FALSE)
+        
+        #Locality plot
+        # Pie Chart with Percentages
+        pdf(paste(ASIHcode,"/figures/",ASIHcode,"-localities-continents.pdf",sep=""))
+        slices <- contDF$Count 
+        lbls <- contDF$Continent 
+        pie(slices,labels = lbls,
+            main=paste(ASIHcode," Collection Localities- Continent",sep=""))
+        dev.off()
         
         
         
         #Collector summaries
         # "collector"
         
-        collectJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:%22",URLencode(as.character(bbRS$recordset[i])),"%22}&top_fields=[%22collector%22]&count=5000",sep=""))
+        collectJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,"}&top_fields=[%22collector%22]&count=5000",sep=""))
         collectDF <- data.frame(Collector=names(collectJS$collector),Count=unlist(collectJS$collector),row.names = NULL)
-        write.csv(collectDF, file=paste(bbRS$ASIHCode[i],"/",bbRS$collectioncode[i],"-RAW_collectors.csv",sep=""),row.names = FALSE)
+        write.csv(collectDF, file=paste(ASIHcode,"/data/",ASIHcode,"-RAW_collectors.csv",sep=""),row.names = FALSE)
         
         
         
         ##Type summmaries
         ## 'typestatus'
         
-        typeJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:%22",URLencode(as.character(bbRS$recordset[i])),"%22}&top_fields=[%22typestatus%22]&count=5000",sep=""))
+        typeJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,"}&top_fields=[%22typestatus%22]&count=5000",sep=""))
         typeDF <- data.frame(TypeStatus=names(typeJS$typestatus),Count=unlist(typeJS$typestatus),row.names = NULL)
-        write.csv(typeDF, file=paste(bbRS$ASIHCode[i],"/",bbRS$collectioncode[i],"-RAW_typestatus.csv",sep=""),row.names = FALSE)
+        write.csv(typeDF, file=paste(ASIHcode,"/data/",ASIHcode,"-RAW_typestatus.csv",sep=""),row.names = FALSE)
         
         
         
         ## Can't forget basis of record
         ## "basisofrecord'
         
-        basJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:%22",URLencode(as.character(bbRS$recordset[i])),"%22}&top_fields=[%22basisofrecord%22]&count=5000",sep=""))
+        basJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,"}&top_fields=[%22basisofrecord%22]&count=5000",sep=""))
         basDF <- data.frame(basisofRecord=names(basJS$basisofrecord),Count=unlist(basJS$basisofrecord),row.names = NULL)
-        write.csv(basDF, file=paste(bbRS$ASIHCode[i],"/",bbRS$collectioncode[i],"-RAW_basis.csv",sep=""),row.names = FALSE)
+        write.csv(basDF, file=paste(ASIHcode,"/data/",ASIHcode,"-RAW_basis.csv",sep=""),row.names = FALSE)
         
 }
 
