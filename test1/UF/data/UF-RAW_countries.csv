@@ -1,13 +1,13 @@
 "Country","Count"
-"united states",157973
+"united states",158064
 "bahama islands",10518
-"colombia",5843
+"colombia",5844
 "virgin islands (usa)",5619
 "venezuela",3709
 "panama",3520
 "peru",2457
+"thailand",2270
 "mexico",2263
-"thailand",2247
 "indonesia",1588
 "cayman islands",1459
 "puerto rico",1145
@@ -38,8 +38,8 @@
 "gabon",313
 "guyana",307
 "netherlands antilles",273
+"bangladesh",250
 "uganda",250
-"bangladesh",249
 "malaysia",240
 "tanzania",237
 "equatorial guinea",222
@@ -96,9 +96,9 @@
 "dominica",15
 "djibouti",14
 "qatar",14
+"myanmar",12
 "thailland",12
 "morocco",11
-"myanmar",11
 "united kingdom",11
 "vietnam",11
 "bahamas",10

@@ -1,9 +1,9 @@
 "Collector","Count"
 "2",1
 "6",2
-"j",2217
-"r",1740
-"e",1728
+"j",2224
+"r",1747
+"e",1729
 "s",1094
 "unknown",1000
 "nelson",976
@@ -13,13 +13,13 @@
 "g",728
 "p",690
 "reimchen",673
-"d",665
+"d",667
 "n",610
 "panter",595
 "m",579
-"nursall",567
-"w",529
-"l",518
+"nursall",574
+"w",530
+"l",519
 "a",477
 "rooney",471
 "roberts",381
@@ -42,7 +42,7 @@
 "wells",156
 "das",154
 "mrinal",154
-"murray",148
+"murray",150
 "university",117
 "buchwald",106
 "turner",101
@@ -74,7 +74,7 @@
 "john",64
 "mobach",60
 "of",60
-"keith",58
+"keith",59
 "ontario",58
 "redfield",53
 "family",52
@@ -83,17 +83,17 @@
 "fisher",50
 "lavallee",47
 "ellis",43
+"jackson",43
 "theoren",43
 "ash",42
 "dubin",42
 "gary",42
-"jackson",42
 "tao",42
 "fuller",41
 "tang",41
 "biological",40
-"alex",38
-"peden",38
+"alex",39
+"peden",39
 "o",37
 "boag",36
 "national",36
@@ -239,6 +239,7 @@
 "krauss",7
 "mcdowall",7
 "meghan",7
+"mel",7
 "nikolsky",7
 "peterson",7
 "poulton",7
@@ -246,6 +247,7 @@
 "sapwell",7
 "tim",7
 "adams",6
+"argyriou",6
 "baker",6
 "board",6
 "butler",6
@@ -268,6 +270,7 @@
 "ruiz",6
 "skeel",6
 "stephen",6
+"thodoris",6
 "victor",6
 "berry",5
 "bob",5
@@ -276,6 +279,7 @@
 "canada",5
 "cruise",5
 "dulka",5
+"fred",5
 "giroq",5
 "glova",5
 "grey",5
@@ -285,6 +289,7 @@
 "lelek",5
 "lowe",5
 "nakamura",5
+"noddin",5
 "pacific",5
 "petersen",5
 "pethon",5
@@ -325,7 +330,6 @@
 "kraft",4
 "landry",4
 "leong",4
-"mel",4
 "mv",4
 "mychjalyk",4
 "nielsen",4
@@ -351,6 +355,7 @@
 "zealand",4
 "akosombo",3
 "al",3
+"alison",3
 "aquatics",3
 "arnfinson",3
 "baron",3
@@ -403,6 +408,7 @@
 "noton",3
 "olsen",3
 "orr",3
+"patchell",3
 "pavel",3
 "proctor",3
 "reisman",3
@@ -459,7 +465,6 @@
 "fix",2
 "fleming",2
 "foote",2
-"fred",2
 "french",2
 "fujita",2
 "garside",2
@@ -503,10 +508,10 @@
 "morin",2
 "morrow",2
 "munzing",2
+"musbach",2
 "nalbant",2
 "newman",2
 "nichol",2
-"noddin",2
 "ogilbia",2
 "orange",2
 "pace",2
@@ -525,6 +530,7 @@
 "roberge",2
 "robert",2
 "rodd",2
+"ron",2
 "rubuliak",2
 "rutt",2
 "ryde",2
@@ -562,7 +568,6 @@
 "ahlander",1
 "alcyon",1
 "alger",1
-"alison",1
 "ambedian",1
 "anderson",1
 "andrews",1
@@ -587,6 +592,7 @@
 "barr",1
 "barton",1
 "bastle",1
+"beck",1
 "becker",1
 "beets",1
 "belfry",1
@@ -681,6 +687,7 @@
 "hanna",1
 "hannon",1
 "hartman",1
+"hayden",1
 "hendry",1
 "henke",1
 "herald",1
@@ -812,7 +819,6 @@
 "richard",1
 "rolf",1
 "romanyk",1
-"ron",1
 "roney",1
 "rose",1
 "rosenfeld",1
