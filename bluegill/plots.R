@@ -6,7 +6,7 @@ library(dplyr)
 library(progress)
 library(scales)
 library(plotrix)
-
+library(plotly)
 
 ##Load up the data
 ##We could call the databuild function or load an rdata file
@@ -49,7 +49,16 @@ locality_plot <- function(ASIHcode,contDF){
                 pie3D(slices,labels=lbls,explode=0.01,main=paste0(ASIHcode," Collection Localities- Continent"))
                 #         pie(slices,labels = lbls,
                 #             main=paste(ASIHcode," Collection Localities- Continent",sep=""))
-                dev.off()        
+                dev.off() 
+                
+                
+                ds <- data.frame(labels = contDF$Continent,
+                                 values = contDF$Count)
+                p <- plot_ly(ds, labels = labels, values = values, type = "pie") %>%
+                        layout(title = paste0(ASIHcode," Collection Localities- Continent"))
+                plotly_IMAGE(p,format = "png",out_file =paste0(ASIHcode,"/figures/",ASIHcode,"-localities-continents-PLOTLY.png"),height = 1080 )
+
+                
         }else{
                 print(paste0("No Locality data-",ASIHcode))
         }
