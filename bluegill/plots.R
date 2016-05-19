@@ -7,6 +7,7 @@ library(progress)
 library(scales)
 library(plotrix)
 library(plotly)
+library(reshape2)
 
 ##Load up the data
 ##We could call the databuild function or load an rdata file
@@ -70,5 +71,85 @@ famsJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={
 famDF <- data.frame(Family=names(famsJS$family),Count=unlist(famsJS$family),row.names = NULL)
 write.csv(famDF, file = paste(ASIHcode,"/data/",ASIHcode,"-RAW_famlies.csv",sep=""),row.names = FALSE)
 
-
 }
+
+
+
+
+
+
+
+
+
+
+##Summary Figures- total record count
+pdf("asih-by-records.pdf")
+srAC <- plyr::count(hugeDF,"ASIHCode")
+srAC <- srAC[order(-srAC$freq),]
+barplot(srAC$freq, main = "Specimen Records by ASIH Code", names.arg = srAC$ASIHCode,las=2)
+dev.off()
+x <- list(
+        title = "ASIH Code"
+)
+y <- list(
+        title = "Number of Records"
+)
+
+pl <- plot_ly(
+        x = srAC$ASIHCode,
+        y = srAC$freq,
+        name = "Records",
+        type = "bar") %>%
+        layout(xaxis = x, yaxis = y)
+pl
+plotly_IMAGE(pl,format = "png",out_file ="asih-by-records-PLOTLY.png",height = 1080 )
+
+
+## Total specimen count
+pdf("asih-by-specimens.pdf")
+sAC <- aggregate(individualcount ~ ASIHCode, data = hugeDF,sum)
+sAC <- sAC[order(-sAC$individualcount),]
+barplot(sAC$individualcount, main = "Specimens by ASIH Code", names.arg = sAC$ASIHCode,las=2)
+dev.off()
+
+x <- list(title = "ASIH Code")
+y <- list(title = "Number of Specimens (millions)")
+
+pl <- plot_ly(
+        x = sAC$ASIHCode,
+        y = sAC$individualcount,
+        name = "Individuals",
+        type = "bar") %>%
+        layout(xaxis = x, yaxis = y)
+pl
+plotly_IMAGE(pl,format = "png",out_file ="asih-by-specimens.png",height = 1080 )
+
+
+
+
+
+pdf("asih-by-specimens-COLOR.pdf")
+foff <- merge(srAC,sAC, by.x = "ASIHCode",all.x = TRUE)
+names(foff) <- c("ASIHCode", "RecordCount", "SpecimenCount")
+p1 <- ggplot(data=foff,aes(x=reorder(foff$ASIHCode,foff$RecordCount),y=RecordCount,fill=RecordCount))+ 
+        geom_bar(stat="identity")+
+        coord_flip() +
+        ggtitle("Digitized ASIH Fish Collections") +
+        xlab("ASIH Code")
+p1
+dev.off()
+
+pdf("asih-by-specimens-STACKED.pdf")
+foff1 <- merge(srAC,sAC, by.x = "ASIHCode",all.x = TRUE)
+names(foff1) <- c("ASIHCode", "RecordCount", "SpecimenCount")
+foff1 <- melt(foff1)
+p2 <- ggplot(foff1,aes(x=reorder(foff1$ASIHCode,foff1$value,mean,na.rm=TRUE),y=value,fill=variable,color=variable)) + 
+        geom_bar(stat="identity",position = "stack") +
+        coord_flip() +
+        ggtitle("Digitized ASIH Fish Collections") +
+        xlab("ASIH Code") +
+        ylab("Count")
+p2
+dev.off()
+
+
