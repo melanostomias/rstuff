@@ -8,6 +8,8 @@ library(scales)
 library(plotrix)
 library(plotly)
 library(reshape2)
+library(countrycode)
+library(rworldmap)
 
 ##Load up the data
 ##We could call the databuild function or load an rdata file
@@ -17,11 +19,12 @@ bd <- read.csv("cleaned-recordsets.csv")
 excludes <- c("MNHN","NRM","INPA","ROM")
 hugeDF <- merge(hugeDF,bd,by.x = "recordset",by.y = "uuid")
 hugeDF <- hugeDF[!hugeDF$ASIHCode %in% excludes,]
+###hugeDF$individualcount <- replace(hugeDF$individualcount,which(is.na(hugeDF$individualcount)),1)
 
 ##Clean up preps
 stdPreps <- read.csv("../vocab/lepomisPreps.csv")
 stdPreps <- stdPreps[1:2]
-bbD <- hugeDF 
+bbD <- hugeDF
 gop <- merge(bbD,stdPreps,by="preps",all.x = TRUE)
 
 bbRS <- plyr::count(gop,c("ASIHCode","collectioncode","institutioncode","recordset"))
@@ -67,6 +70,24 @@ locality_plot <- function(ASIHcode,contDF){
         }
 locality_plot(ASIHcode,contDF)
 
+##World Choropleth Map
+cuntJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,",%22collectioncode%22:",collectioncode,",%22institutioncode%22:",institutioncode,"}&top_fields=[%22countrycode%22]&count=5000",sep=""))
+cuntDF <- data.frame(Country=names(cuntJS$country),Count=unlist(cuntJS$country),row.names = NULL)
+cuntDF$Country <- toupper(cuntDF$Country)
+if (length(cuntDF$Country) > 0){
+# light grey boundaries
+l <- list(color = toRGB("grey"), width = 0.5)
+# specify map projection/options
+g <- list(showframe = FALSE,showcoastlines = FALSE,projection = list(type = 'Mercator'))
+f <- plot_ly(cuntDF, z = Count, text = Country, locations = Country, type = 'choropleth',
+        color = Count, colors = 'Blues', marker = list(line = l),
+        colorbar = list(title = 'Country')) %>%
+        layout(title = 'Records by Country',geo = g)
+plotly_IMAGE(f,format = "png",out_file =paste0(ASIHcode,"/figures/",ASIHcode,"-localities-continents-PLOTLY-MAP.png"),height = 1080 )
+}else{
+        print(paste0("No Locality data-",ASIHcode))
+}
+
 famsJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,",%22collectioncode%22:",collectioncode,",%22institutioncode%22:",institutioncode,"}&top_fields=[%22family%22]&count=5000",sep=""))
 famDF <- data.frame(Family=names(famsJS$family),Count=unlist(famsJS$family),row.names = NULL)
 write.csv(famDF, file = paste(ASIHcode,"/data/",ASIHcode,"-RAW_famlies.csv",sep=""),row.names = FALSE)
@@ -107,7 +128,8 @@ plotly_IMAGE(pl,format = "png",out_file ="asih-by-records-PLOTLY.png",height = 1
 
 ## Total specimen count
 pdf("asih-by-specimens.pdf")
-sAC <- aggregate(individualcount ~ ASIHCode, data = hugeDF,sum)
+larval <- rbind.fill(hugeDF[grep("egg",hugeDF$collectioncode),],hugeDF[grep("larval",hugeDF$collectioncode),]) 
+sAC <- aggregate(individualcount ~ ASIHCode, data = hugeDF[!hugeDF$catalognumber %in% larval$catalognumber,],sum)
 sAC <- sAC[order(-sAC$individualcount),]
 barplot(sAC$individualcount, main = "Specimens by ASIH Code", names.arg = sAC$ASIHCode,las=2)
 dev.off()
@@ -151,5 +173,16 @@ p2 <- ggplot(foff1,aes(x=reorder(foff1$ASIHCode,foff1$value,mean,na.rm=TRUE),y=v
         ylab("Count")
 p2
 dev.off()
+
+
+
+
+
+
+
+
+
+
+
 
 
