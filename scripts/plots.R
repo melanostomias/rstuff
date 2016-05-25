@@ -57,6 +57,8 @@ for(i in 1:length(bbRS$ASIHCode))
         contDF <- data.frame(Continent=names(contJS$countrycode),Count=unlist(contJS$countrycode),row.names = NULL)
         ## Some collections don't have locality data, this should catch them
         if (length(contDF$Continent) > 0){
+                ##Write our data to CSV
+                write.csv(contDF, file = paste0("../data/",ASIHcode,"/data/",ASIHcode,"-localities-RAW.csv"),row.names = FALSE)
                 contDF$Continent <- toupper(contDF$Continent)
                 contDF$Continent <- countrycode(contDF$Continent,origin = "iso3c",destination = "iso3c",warn = TRUE)
                 cdf <- country2Region(regionType = "GEO3major",inFile = contDF,nameDataColumn = "Count",joinCode = "ISO3",nameJoinColumn = "Continent",FUN = "sum")
@@ -97,13 +99,6 @@ for(i in 1:length(bbRS$ASIHCode))
 
 
 }
-
-
-
-
-
-
-
 
 
 

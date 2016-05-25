@@ -121,4 +121,4 @@ ff <- merge(ff,gd,by.x = c("recordset","institutioncode","collectioncode"),by.y 
 ## and clean up duplicates
 hugeDF <- rbind.fill(dd,ff)
 hugeDF <- hugeDF[!duplicated(hugeDF),]
-save(hugeDF, file = 'lots-o-records.rdata', compress = 'xz')
+save(hugeDF, file = 'data-raw/lots-o-records.rdata', compress = 'xz')
