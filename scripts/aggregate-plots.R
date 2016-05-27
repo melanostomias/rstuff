@@ -19,6 +19,7 @@ load("data-raw/lots-o-records.rdata")
 dir.create("../data/summary",showWarnings = FALSE)
 dir.create("../data/summary/figures",showWarnings = FALSE)
 dir.create("../data/summary/data",showWarnings = FALSE)
+
 ##Summary Figures- total record count
 pdf("../data/summary/figures/asih-by-records.pdf")
 srAC <- plyr::count(hugeDF,"ASIHCode")
@@ -89,3 +90,69 @@ p2 <- ggplot(foff1,aes(x=reorder(foff1$ASIHCode,foff1$value,mean,na.rm=TRUE),y=v
 p2
 dev.off()
 write.csv(foff1,file ="../data/summary/data/asih-by-specimens-STACKED.csv",row.names = FALSE)
+
+
+##bar graph number of unique families per collection
+collectionsData <- list.files("../data")
+collectionsData <- collectionsData[!collectionsData=="summary"]
+agrDF <- data.frame(ASIHCode=character(0),FamilyCount=integer(0))
+for (i in seq_along(collectionsData)){
+        oo <- read.csv(paste0("../data/",collectionsData[i],"/data/",collectionsData[i],"-RAW_famlies.csv"))
+        asDF <- data.frame(ASIHCode=collectionsData[i],FamilyCount=nrow(oo))
+        agrDF <-rbind(agrDF,asDF)
+}
+agrDF <- agrDF[order(-agrDF$FamilyCount),]
+write.csv(agrDF,file ="../data/summary/data/asih-by-families-PLOTLY.csv",row.names = FALSE)
+x <- list(title = "ASIH Code")
+y <- list(title = "Unique Family Names")
+
+pl <- plot_ly(
+        x = agrDF$ASIHCode,
+        y = agrDF$FamilyCount,
+        name = "Unique Families by ASIH Code",
+        type = "bar") %>%
+        layout(xaxis = x, yaxis = y)
+pl
+plotly_IMAGE(pl,format = "png",out_file ="../data/summary/figures/asih-by-families-PLOTLY.png",height = 1080 )        
+        
+
+##Map of world with sampling effort across all fish collections by number of records 
+collectionsLOC <- list.files("../data")
+collectionsLOC <- collectionsData[!collectionsData=="summary"]
+locDF <- data.frame()
+for (i in seq_along(collectionsData)){
+        if(file.exists(paste0("../data/",collectionsData[i],"/data/",collectionsData[i],"-localities-RAW.csv"))){
+        ot <- read.csv(paste0("../data/",collectionsData[i],"/data/",collectionsData[i],"-localities-RAW.csv"))
+        ot$Continent <- toupper(ot$Continent)
+        ot$Continent <- countrycode(ot$Continent,origin = "iso3c",destination = "iso3c",warn = TRUE)
+        #cdf <- country2Region(regionType = "GEO3major",inFile = ot,nameDataColumn = "Count",joinCode = "ISO3",nameJoinColumn = "Continent",FUN = "sum")
+        #ot <- data.frame(Continent=row.names(cdf),Count=cdf$sumCountbyGEO3major,row.names = NULL)
+        ot$ASIHCode <- collectionsData[i]
+        ot <- dcast(ot,ASIHCode ~ Continent,value.var = "Count")
+        locDF <-rbind.fill(locDF,ot)
+        }
+}
+tess <-locDF
+tess$ASIHCode <- NULL
+tess <- colSums(tess,na.rm = T)        
+tess <- data.frame(Region=attr(tess,"names"),Count=tess)
+
+# light grey boundaries
+l <- list(color = toRGB("grey"), width = 0.5)
+
+# specify map projection/options
+g <- list(
+        showframe = FALSE,
+        showcoastlines = FALSE,
+        projection = list(type = 'Mercator')
+)
+
+pp <- plot_ly(tess, z = Count, text = Region, locations = Region, type = 'choropleth',
+        color = Count, colors = 'Blues', marker = list(line = l),
+        colorbar = list(title = 'Sampling Effort')) %>%
+        layout(title = 'ASIH Global Sampling Effort ',
+               geo = g)
+
+plotly_IMAGE(pp,format = "png",out_file ="../data/summary/figures/asih-by-effort-map-PLOTLY.png",height = 1080 )
+write.csv(tess,file ="../data/summary/data/asih-by-effort-map-PLOTLY.csv",row.names = FALSE)
+
