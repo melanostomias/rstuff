@@ -10,6 +10,7 @@ library(plotly)
 library(reshape2)
 library(countrycode)
 library(rworldmap)
+library(RColorBrewer)
 
 ##Load up the data
 ##We could call the databuild function or load an rdata file
@@ -42,8 +43,8 @@ plotly_IMAGE(pl,format = "png",out_file ="../data/summary/figures/asih-by-record
 
 ## Total specimen count
 pdf("../data/summary/figures/asih-by-specimens.pdf")
-larval <- rbind.fill(hugeDF[grep("egg",hugeDF$collectioncode),],hugeDF[grep("larval",hugeDF$collectioncode),]) 
-sAC <- aggregate(individualcount ~ ASIHCode, data = hugeDF[!hugeDF$catalognumber %in% larval$catalognumber,],sum)
+#larval <- rbind.fill(hugeDF[grep("egg",hugeDF$collectioncode),],hugeDF[grep("larval",hugeDF$collectioncode),]) 
+sAC <- aggregate(individualcount ~ ASIHCode, data = hugeDF,sum)
 sAC <- sAC[order(-sAC$individualcount),]
 barplot(sAC$individualcount, main = "Specimens by ASIH Code", names.arg = sAC$ASIHCode,las=2)
 dev.off()
@@ -144,15 +145,16 @@ l <- list(color = toRGB("grey"), width = 0.5)
 g <- list(
         showframe = FALSE,
         showcoastlines = FALSE,
-        projection = list(type = 'Mercator')
+        projection = list(type = 'Mercator'),
+        landcolor = toRGB("grey90")
 )
 
 pp <- plot_ly(tess, z = Count, text = Region, locations = Region, type = 'choropleth',
-        color = Count, colors = 'Blues', marker = list(line = l),
+        color = Count, colors = colorRampPalette(brewer.pal(7,"Reds"))(length(tess$Count)), marker = list(line = l),  
         colorbar = list(title = 'Sampling Effort')) %>%
         layout(title = 'ASIH Global Sampling Effort ',
                geo = g)
-
+pp
 plotly_IMAGE(pp,format = "png",out_file ="../data/summary/figures/asih-by-effort-map-PLOTLY.png",height = 1080 )
 write.csv(tess,file ="../data/summary/data/asih-by-effort-map-PLOTLY.csv",row.names = FALSE)
 
