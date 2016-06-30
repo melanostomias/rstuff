@@ -170,8 +170,10 @@ tess <-locDF
 tess$ASIHCode <- NULL
 tess <- colSums(tess,na.rm = T)        
 tess <- data.frame(Region=attr(tess,"names"),Count=tess)
-tess1 <- tess[tess$Region=="USA",]
-tess <- tess[!tess$Region=="USA",]
+##tess <- read.csv("../data/summary/data/asih-by-effort-map-PLOTLY.csv")
+isoExclude <- c("USA","MEX","BRA","VEN","PHL","PER")
+tess1 <- tess[tess$Region %in% isoExclude,]
+tess <- tess[!tess$Region %in% isoExclude,]
 #tess$Count <- cume_dist(tess$Count)
 
 # light grey boundaries
@@ -186,13 +188,18 @@ g <- list(
         showocean = TRUE,
         oceancolor = toRGB("black")
 )
-
+sca <- list(c(0, toRGB("skyblue1")), list(1, toRGB("purple")))
 pp <- plot_ly(tess, z = Count, text = Region, locations = Region, type = 'choropleth',
         color = Count, colors = colorRampPalette(brewer.pal(6,"Spectral"))(100), marker = list(line = l),  
         colorbar = list(title = 'Records Count')) %>%
-        add_trace(z=tess1$Count, locations=tess1$Region, type="choropleth",showscale=F, autocolorscale=T , marker=list(line=list(color=toRGB("purple")))) %>%
+        add_trace(z=tess1$Count, locations=tess1$Region,inherit=T,colorscale = sca , type="choropleth",showscale=F, autocolorscale=F,zmin=1,zmax=1) %>%
         layout(title = 'ASIH Global Records by Country',geo = g)
 pp
+
+
+
+
+
 plotly_IMAGE(pp,format = "png",out_file ="../data/summary/figures/asih-by-effort-map-PLOTLY.png",height = 1080 )
 write.csv(tess,file ="../data/summary/data/asih-by-effort-map-PLOTLY.csv",row.names = FALSE)
 
