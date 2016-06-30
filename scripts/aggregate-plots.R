@@ -115,20 +115,53 @@ pl <- plot_ly(
         layout(xaxis = x, yaxis = y)
 pl
 plotly_IMAGE(pl,format = "png",out_file ="../data/summary/figures/asih-by-families-PLOTLY.png",height = 1080 )        
+
+##Family distributions
+collectionsData <- list.files("../data")
+collectionsData <- collectionsData[!collectionsData=="summary"]
+famDIST <- data.frame(Family=character(0),FamilyCount=integer(0))
+for (i in seq_along(collectionsData)){
+        oo <- read.csv(paste0("../data/",collectionsData[i],"/data/",collectionsData[i],"-RAW_famlies.csv"))
+        famDIST <-rbind(famDIST,oo)
+}
+famDIST <- aggregate(Count ~ Family, data= famDIST,sum)
+write.csv(famDIST,file ="../data/summary/data/families-distribution-PLOTLY.csv",row.names = FALSE)
+hist(famDIST$Family)
+famDIST <- famDIST[order(-famDIST$Count),]
+p <- plot_ly(x=famDIST$Family,y=famDIST$Count,type = "bar")
+layout(p,yaxis = list(range = c(10, 50000)))
+
+
+famDIST1 <- famDIST[1:25,]
+p <- plot_ly(x=famDIST1$Family,y=famDIST1$Count,type = "bar")
+p
+
+famDIST2 <- famDIST[26:100,]
+p <- plot_ly(x=famDIST2$Family,y=famDIST2$Count,type = "bar")
+p
+
+
+famDIST3 <- famDIST[101:1000,]
+p <- plot_ly(x=famDIST3$Family,y=famDIST3$Count,type = "bar")
+p
+
+
+
+
         
 
 ##Map of world with sampling effort across all fish collections by number of records 
 collectionsLOC <- list.files("../data")
-collectionsLOC <- collectionsData[!collectionsData=="summary"]
+collectionsLOC <- collectionsLOC[!collectionsLOC=="summary"]
 locDF <- data.frame()
-for (i in seq_along(collectionsData)){
-        if(file.exists(paste0("../data/",collectionsData[i],"/data/",collectionsData[i],"-localities-RAW.csv"))){
-        ot <- read.csv(paste0("../data/",collectionsData[i],"/data/",collectionsData[i],"-localities-RAW.csv"))
+for (i in seq_along(collectionsLOC)){
+        if(file.exists(paste0("../data/",collectionsLOC[i],"/data/",collectionsLOC[i],"-localities-RAW.csv"))){
+        ot <- read.csv(paste0("../data/",collectionsLOC[i],"/data/",collectionsLOC[i],"-localities-RAW.csv"))
         ot$Continent <- toupper(ot$Continent)
         ot$Continent <- countrycode(ot$Continent,origin = "iso3c",destination = "iso3c",warn = TRUE)
         #cdf <- country2Region(regionType = "GEO3major",inFile = ot,nameDataColumn = "Count",joinCode = "ISO3",nameJoinColumn = "Continent",FUN = "sum")
         #ot <- data.frame(Continent=row.names(cdf),Count=cdf$sumCountbyGEO3major,row.names = NULL)
-        ot$ASIHCode <- collectionsData[i]
+        ot$ASIHCode <- collectionsLOC[i]
         ot <- dcast(ot,ASIHCode ~ Continent,value.var = "Count")
         locDF <-rbind.fill(locDF,ot)
         }
@@ -137,6 +170,9 @@ tess <-locDF
 tess$ASIHCode <- NULL
 tess <- colSums(tess,na.rm = T)        
 tess <- data.frame(Region=attr(tess,"names"),Count=tess)
+tess1 <- tess[tess$Region=="USA",]
+tess <- tess[!tess$Region=="USA",]
+#tess$Count <- cume_dist(tess$Count)
 
 # light grey boundaries
 l <- list(color = toRGB("grey"), width = 0.5)
@@ -146,14 +182,16 @@ g <- list(
         showframe = FALSE,
         showcoastlines = FALSE,
         projection = list(type = 'Mercator'),
-        landcolor = toRGB("grey90")
+        landcolor = toRGB("purple"),
+        showocean = TRUE,
+        oceancolor = toRGB("black")
 )
 
 pp <- plot_ly(tess, z = Count, text = Region, locations = Region, type = 'choropleth',
-        color = Count, colors = colorRampPalette(brewer.pal(7,"Reds"))(length(tess$Count)), marker = list(line = l),  
-        colorbar = list(title = 'Sampling Effort')) %>%
-        layout(title = 'ASIH Global Sampling Effort ',
-               geo = g)
+        color = Count, colors = colorRampPalette(brewer.pal(6,"Spectral"))(100), marker = list(line = l),  
+        colorbar = list(title = 'Records Count')) %>%
+        add_trace(z=tess1$Count, locations=tess1$Region, type="choropleth",showscale=F, autocolorscale=T , marker=list(line=list(color=toRGB("purple")))) %>%
+        layout(title = 'ASIH Global Records by Country',geo = g)
 pp
 plotly_IMAGE(pp,format = "png",out_file ="../data/summary/figures/asih-by-effort-map-PLOTLY.png",height = 1080 )
 write.csv(tess,file ="../data/summary/data/asih-by-effort-map-PLOTLY.csv",row.names = FALSE)

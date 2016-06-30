@@ -73,6 +73,9 @@ for(i in 1:length(bbRS$ASIHCode))
         ##Build family dataframe for each collection
         famsJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,",%22collectioncode%22:",collectioncode,",%22institutioncode%22:",institutioncode,"}&top_fields=[%22family%22]&count=5000",sep=""))
         famDF <- data.frame(Family=names(famsJS$family),Count=unlist(famsJS$family),row.names = NULL)
+        ##The iDigBio API returns Family names not capitalized, we will fix this now
+        famDF$Family <- as.character(famDF$Family)
+        famDF$Family <- paste0(toupper(substr(famDF$Family, 1, 1)), substr(famDF$Family, 2, nchar(famDF$Family)))
         ##Write family dataframe to CSV
         write.csv(famDF, file = paste("../data/",ASIHcode,"/data/",ASIHcode,"-RAW_famlies.csv",sep=""),row.names = FALSE)
         ## top 25 family names for each collection pie chart
