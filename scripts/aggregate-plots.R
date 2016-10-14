@@ -203,3 +203,30 @@ pp
 plotly_IMAGE(pp,format = "png",out_file ="../data/summary/figures/asih-by-effort-map-PLOTLY.png",height = 1080 )
 write.csv(tess,file ="../data/summary/data/asih-by-effort-map-PLOTLY.csv",row.names = FALSE)
 
+## Typestatus summaries accross ASIH collections
+collectionsData <- list.files("../data")
+collectionsData <- collectionsData[!collectionsData=="summary"]
+tpDF <- data.frame(ASIHCode=character(0),Holotype=integer(0),Paratype=integer(0))
+for (i in seq_along(collectionsData)){
+        oo <- read.csv(paste0("../data/",collectionsData[i],"/data/",collectionsData[i],"-RAW_typestatus.csv"))
+        if(nrow(oo)==0){
+                holo <- NA
+                para <- NA
+        }else{
+                if(nrow(oo[tolower(oo$Typestatus)=="holotype",])==0){
+                        holo <- NA
+                }else{
+                        holo <- oo[tolower(oo$Typestatus)=="holotype",]$Count        
+                }
+                if(nrow(oo[tolower(oo$Typestatus)=="paratype",])==0){
+                        para <- NA
+                }else{
+                        para <- oo[tolower(oo$Typestatus)=="paratype",]$Count + oo[tolower(oo$Typestatus)=="paratype",]$Count
+                }
+                
+        }
+        
+        asDF <- data.frame(ASIHCode=collectionsData[i],Holotype=holo,Paratype=para)
+        tpDF <-rbind(tpDF,asDF)
+}
+write.csv(tpDF,file ="../data/summary/data/asih-types-summary.csv",row.names = FALSE)
