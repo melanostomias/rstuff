@@ -66,9 +66,15 @@ for(i in 1:length(bbRS$ASIHCode))
                 contDF <- data.frame(Continent=row.names(cdf),Count=cdf$sumCountbyGEO3major,row.names = NULL)
                 if(type=="figures"|type=="all"){locality_plot(ASIHcode,contDF)}
         }else{print(paste0("No Locality data-",ASIHcode))}
-
-
-
+        
+        
+        ##Build typestatus dataframe for each collection
+        typesJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,",%22collectioncode%22:",collectioncode,",%22institutioncode%22:",institutioncode,"}&top_fields=[%22typestatus%22]&count=5000",sep=""))
+        typeDF <- data.frame(Typestatus=names(typesJS$typestatus),Count=unlist(typesJS$typestatus),row.names = NULL)
+        ##The iDigBio API returns Family names not capitalized, we will fix this now
+        ##Write typestatus dataframe to CSV
+        write.csv(typeDF, file = paste("../data/",ASIHcode,"/data/",ASIHcode,"-RAW_typestatus.csv",sep=""),row.names = FALSE)
+        
 
         ##Build family dataframe for each collection
         famsJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,",%22collectioncode%22:",collectioncode,",%22institutioncode%22:",institutioncode,"}&top_fields=[%22family%22]&count=5000",sep=""))
