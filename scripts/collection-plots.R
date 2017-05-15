@@ -13,13 +13,8 @@ library(rworldmap)
 
 ##Load up the data
 ##We could call the databuild function or load an rdata file
-load("data-raw/lots-o-records.rdata")
-
-##Clean up preps
-stdPreps <- read.csv("../vocab/lepomisPreps.csv")
-stdPreps <- stdPreps[1:2]
-bbD <- hugeDF
-gop <- merge(bbD,stdPreps,by="preps",all.x = TRUE)
+load("data-raw/hugeDF.rdata")
+gop <- hugeDF
 
 bbRS <- plyr::count(gop,c("ASIHCode","collectioncode","institutioncode","recordset"))
 profile_collections <- function(bbRS, type="all"){
@@ -47,15 +42,20 @@ for(i in 1:length(bbRS$ASIHCode))
         #Locality plot
         # Pie Chart with Percentages
                 ds <- data.frame(labels = contDF$Continent, values = contDF$Count)
-                p <- plot_ly(ds, labels = labels, values = values, type = "pie",text=labels) %>%
-                        layout(title = paste0(ASIHcode," Collection Localities <br> Global Environment Outlook (GEO) Regions <br> <a href=\"http://geodata.grid.unep.ch/images/regional.pdf\">http://geodata.grid.unep.ch/images/regional.pdf</a>"))
+                p <- plot_ly(ds, labels = ~labels, values = ~values, type = "pie",text=~labels) %>%
+                        layout(title = paste0(ASIHcode," Collection Localities <br> Global Environment Outlook (GEO) Regions <br> <a href=\"http://geodata.grid.unep.ch/images/regional.pdf\">http://geodata.grid.unep.ch/images/regional.pdf</a>"),
+                               xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+                               yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
                 p
-                plotly_IMAGE(p,format = "png",out_file =paste0("../data/",ASIHcode,"/figures/",ASIHcode,"-localities-continents-PLOTLY.png"),height = 1080 )
+                export(p,file =paste0("../data/",ASIHcode,"/figures/",ASIHcode,"-localities-continents-PLOTLY.png"),vheight= 1080 )
+                #plotly_IMAGE(p,format = "png",out_file =paste0("../data/",ASIHcode,"/figures/",ASIHcode,"-localities-continents-PLOTLY.png"),height = 1080 )
         }
         
         ##Query iDigBio and build a locality dataframe for each collection
-        contJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,",%22collectioncode%22:",collectioncode,",%22institutioncode%22:",institutioncode,"}&top_fields=[%22countrycode%22]&count=5000",sep=""))
-        contDF <- data.frame(Continent=names(contJS$countrycode),Count=unlist(contJS$countrycode),row.names = NULL)
+        contJS <- plyr::count(hugeDF[hugeDF$ASIHCode==ASIHcode,],"dwc.country")
+        contJS$Continent <- countrycode::countrycode(contJS$dwc.country,'country.name', 'iso3c')
+        contJS$Count <- contJS$freq
+        contDF <- contJS[3:4]
         ## Some collections don't have locality data, this should catch them
         if (length(contDF$Continent) > 0){
                 ##Write our data to CSV
@@ -69,27 +69,29 @@ for(i in 1:length(bbRS$ASIHCode))
         
         
         ##Build typestatus dataframe for each collection
-        typesJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,",%22collectioncode%22:",collectioncode,",%22institutioncode%22:",institutioncode,"}&top_fields=[%22typestatus%22]&count=5000",sep=""))
-        typeDF <- data.frame(Typestatus=names(typesJS$typestatus),Count=unlist(typesJS$typestatus),row.names = NULL)
+        #typesJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,",%22collectioncode%22:",collectioncode,",%22institutioncode%22:",institutioncode,"}&top_fields=[%22typestatus%22]&count=5000",sep=""))
+        typesJS <- plyr::count(hugeDF[hugeDF$ASIHCode==ASIHcode,],"dwc.typeStatus")
+        typeDF <- typesJS[order(typesJS$freq,decreasing = T),]
+        names(typeDF) <- c("Typestatus","Count")
         ##The iDigBio API returns Family names not capitalized, we will fix this now
         ##Write typestatus dataframe to CSV
         write.csv(typeDF, file = paste("../data/",ASIHcode,"/data/",ASIHcode,"-RAW_typestatus.csv",sep=""),row.names = FALSE)
         
 
         ##Build family dataframe for each collection
-        famsJS <- fromJSON(paste("http://search.idigbio.org/v2/summary/top/records/?rq={%22recordset%22:",recordset,",%22collectioncode%22:",collectioncode,",%22institutioncode%22:",institutioncode,"}&top_fields=[%22family%22]&count=5000",sep=""))
-        famDF <- data.frame(Family=names(famsJS$family),Count=unlist(famsJS$family),row.names = NULL)
-        ##The iDigBio API returns Family names not capitalized, we will fix this now
-        famDF$Family <- as.character(famDF$Family)
-        famDF$Family <- paste0(toupper(substr(famDF$Family, 1, 1)), substr(famDF$Family, 2, nchar(famDF$Family)))
+        famsJS <- plyr::count(hugeDF[hugeDF$ASIHCode==ASIHcode,],"dwc.family")
+        famDF <- famsJS[order(famsJS$freq,decreasing = T),]
+        names(famDF) <- c("Family","Count")
         ##Write family dataframe to CSV
         write.csv(famDF, file = paste("../data/",ASIHcode,"/data/",ASIHcode,"-RAW_famlies.csv",sep=""),row.names = FALSE)
         ## top 25 family names for each collection pie chart
         ss <- data.frame(labels = famDF$Family[1:25],
                  values = famDF$Count[1:25])
-        p <- plot_ly(ss, labels = labels, values = values, type = "pie") %>%
-        layout(title = paste0(ASIHcode," Top 25 Families"))
-        if(type=="figures"|type=="all"){plotly_IMAGE(p,format = "png",out_file =paste0("../data/",ASIHcode,"/figures/",ASIHcode,"-top25-families-PLOTLY.png"),height = 1080 )}
+        p <- plot_ly(ss, labels = ~labels, values = ~values, type = "pie") %>%
+        layout(title = paste0(ASIHcode," Top 25 Families"),
+               xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+               yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+        if(type=="figures"|type=="all"){export(p,file =paste0("../data/",ASIHcode,"/figures/",ASIHcode,"-top25-families-PLOTLY.png"),vheight = 1080 )}
 
 
 }

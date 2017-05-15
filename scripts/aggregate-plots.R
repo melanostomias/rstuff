@@ -14,7 +14,7 @@ library(RColorBrewer)
 
 ##Load up the data
 ##We could call the databuild function or load an rdata file
-load("data-raw/lots-o-records.rdata")
+load("data-raw/hugeDF.rdata")
 
 
 dir.create("../data/summary",showWarnings = FALSE)
@@ -29,7 +29,10 @@ barplot(srAC$freq, main = "Specimen Records by ASIH Code", names.arg = srAC$ASIH
 dev.off()
 write.csv(srAC,file ="../data/summary/data/asih-by-records.csv",row.names = FALSE)
 ##Summary Figures- total record count PLOTLY
-x <- list(title = "ASIH Code")
+x <- list(title = "ASIH Code",
+          type = "category",
+          categoryorder = "array",
+          categoryarray = sort(srAC$freq,decreasing = T))
 y <- list(title = "Number of Records")
 pl <- plot_ly(
         x = srAC$ASIHCode,
@@ -38,18 +41,23 @@ pl <- plot_ly(
         type = "bar") %>%
         layout(xaxis = x, yaxis = y)
 pl
-plotly_IMAGE(pl,format = "png",out_file ="../data/summary/figures/asih-by-records-PLOTLY.png",height = 1080 )
+export(pl,file ="../data/summary/figures/asih-by-records-PLOTLY.png",vheight = 1080 )
 
 
-## Total specimen count
+## Total specimen count (indexed field)
 pdf("../data/summary/figures/asih-by-specimens.pdf")
-#larval <- rbind.fill(hugeDF[grep("egg",hugeDF$collectioncode),],hugeDF[grep("larval",hugeDF$collectioncode),]) 
 sAC <- aggregate(individualcount ~ ASIHCode, data = hugeDF,sum)
 sAC <- sAC[order(-sAC$individualcount),]
+write.csv(sAC,file ="../data/summary/data/asih-by-specimens.csv",row.names = FALSE)
+## ## Total specimen count (bluegill values)
+sAC <- read.csv("../data/summary/data/asih-by-specimens1.csv")
+sAC$individualcount <- sAC$bluegill.individualCount
 barplot(sAC$individualcount, main = "Specimens by ASIH Code", names.arg = sAC$ASIHCode,las=2)
 dev.off()
-write.csv(sAC,file ="../data/summary/data/asih-by-specimens.csv",row.names = FALSE)
-x <- list(title = "ASIH Code")
+x <- list(title = "ASIH Code",
+          type = "category",
+          categoryorder = "array",
+          categoryarray = sort(sAC$individualcount,decreasing = T))
 y <- list(title = "Number of Specimens (millions)")
 
 pl <- plot_ly(
@@ -59,7 +67,7 @@ pl <- plot_ly(
         type = "bar") %>%
         layout(xaxis = x, yaxis = y)
 pl
-plotly_IMAGE(pl,format = "png",out_file ="../data/summary/figures/asih-by-specimens-PLOTLY.png",height = 1080 )
+export(pl,file ="../data/summary/figures/asih-by-specimens-PLOTLY.png",vheight = 1080 )
 
 
 
@@ -104,7 +112,10 @@ for (i in seq_along(collectionsData)){
 }
 agrDF <- agrDF[order(-agrDF$FamilyCount),]
 write.csv(agrDF,file ="../data/summary/data/asih-by-families-PLOTLY.csv",row.names = FALSE)
-x <- list(title = "ASIH Code")
+x <- list(title = "ASIH Code",
+          type = "category",
+          categoryorder = "array",
+          categoryarray = sort(agrDF$FamilyCount,decreasing = T))
 y <- list(title = "Unique Family Names")
 
 pl <- plot_ly(
@@ -114,7 +125,7 @@ pl <- plot_ly(
         type = "bar") %>%
         layout(xaxis = x, yaxis = y)
 pl
-plotly_IMAGE(pl,format = "png",out_file ="../data/summary/figures/asih-by-families-PLOTLY.png",height = 1080 )        
+export(pl,file ="../data/summary/figures/asih-by-families-PLOTLY.png",vheight = 1080 )        
 
 ##Family distributions
 collectionsData <- list.files("../data")
@@ -202,31 +213,86 @@ pp
 
 plotly_IMAGE(pp,format = "png",out_file ="../data/summary/figures/asih-by-effort-map-PLOTLY.png",height = 1080 )
 write.csv(tess,file ="../data/summary/data/asih-by-effort-map-PLOTLY.csv",row.names = FALSE)
+write.csv(tess1,file ="../data/summary/data/asih-by-effort-map-PLOTLY-USA.csv",row.names = FALSE)
 
 ## Typestatus summaries accross ASIH collections
 collectionsData <- list.files("../data")
 collectionsData <- collectionsData[!collectionsData=="summary"]
 tpDF <- data.frame(ASIHCode=character(0),Holotype=integer(0),Paratype=integer(0))
 for (i in seq_along(collectionsData)){
+        ##Read in aggregated raw type values for each ASIH collection
         oo <- read.csv(paste0("../data/",collectionsData[i],"/data/",collectionsData[i],"-RAW_typestatus.csv"))
+        ##Did they provide any typestatus data?
         if(nrow(oo)==0){
+                ##Nope, lets write their value as NA
                 holo <- NA
                 para <- NA
         }else{
-                if(nrow(oo[tolower(oo$Typestatus)=="holotype",])==0){
+                ##Are there any holotypes data?
+                if(nrow(oo[grepl("holotype|neotype|syntype|lectotype",oo$Typestatus,ignore.case = T),])==0){
+                        ##Nope, write value as NA
                         holo <- NA
                 }else{
-                        holo <- oo[tolower(oo$Typestatus)=="holotype",]$Count        
+                        ##Yes, lets sum the values and write them to the vector holo
+                        holo <- sum(oo[grepl("holotype|neotype|syntype|lectotype",oo$Typestatus,ignore.case = T),]$Count)        
                 }
-                if(nrow(oo[tolower(oo$Typestatus)=="paratype",])==0){
+                ##Are there any paratypes data?
+                if(nrow(oo[grepl("paratype|paratopotype|paralectotype|allotype",oo$Typestatus,ignore.case = T),])==0){
+                        ##Nope, write value as NA
                         para <- NA
                 }else{
-                        para <- oo[tolower(oo$Typestatus)=="paratype",]$Count + oo[tolower(oo$Typestatus)=="paratype",]$Count
+                        ##Yes, sum them to vector para
+                        para <- sum(oo[grepl("paratype|paratopotype|paralectotype|allotype",oo$Typestatus,ignore.case = T),]$Count)
                 }
                 
         }
-        
+        ##Create a dataframe frome these values ASIHCode, holo,para
         asDF <- data.frame(ASIHCode=collectionsData[i],Holotype=holo,Paratype=para)
+        ##Add these rows to our summary dataframe
         tpDF <-rbind(tpDF,asDF)
 }
+tpDF <- tpDF[order(tpDF$Holotype,decreasing = T),]
 write.csv(tpDF,file ="../data/summary/data/asih-types-summary.csv",row.names = FALSE)
+
+x <- list(title = "ASIH Code",
+          type = "category",
+          categoryorder = "array",
+          categoryarray = sort(tpDF$Holotype,decreasing = T))
+y <- list(title = "# typeStatus Records")
+pl <- plot_ly(
+        data = tpDF,
+        x = ~ASIHCode,
+        y = ~Holotype,
+        name = "Holotype",
+        type = "bar") %>%
+        add_trace(y = ~Paratype, name="Paratype") %>%
+        layout(xaxis = x, yaxis = y,barmode="stack")
+pl
+export(pl,file ="../data/summary/figures/asih-typestatus-summary-PLOTLY.png",vheight = 1080 )
+
+
+##Did collections provide geopoints?
+asL <- unique(hugeDF$ASIHCode)
+gpDF <- data.frame(ASIHCode=character(0),gpCount=integer(0),gpPCT=integer(0),stringsAsFactors = F)
+for (i in seq_along(asL)){
+geoAGG <- plyr::count(hugeDF[hugeDF$ASIHCode==asL[i]&!is.na(hugeDF$idigbio.geoPoint)&nchar(hugeDF$idigbio.geoPoint)>0,],"idigbio.geoPoint")
+geopct <- round((sum(geoAGG$freq)/plyr::count(hugeDF,"ASIHCode")[plyr::count(hugeDF,"ASIHCode")$ASIHCode==asL[i],]$freq)*100,2)
+asDF <- data.frame(ASIHCode=asL[i],gpCount=sum(geoAGG$freq),gpPCT=geopct,stringsAsFactors = F)
+gpDF <- rbind(gpDF,asDF)
+}
+gpDF <- gpDF[order(gpDF$gpPCT,decreasing = T),]
+write.csv(gpDF,file ="../data/summary/data/asih-geopoint-summary.csv",row.names = FALSE)
+x <- list(title = "ASIH Code",
+          type = "category",
+          categoryorder = "array",
+          categoryarray = sort(gpDF$gpPCT,decreasing = T))
+y <- list(title = "% Complete")
+pl <- plot_ly(
+        data = gpDF,
+        x = ~ASIHCode,
+        y = ~gpPCT,
+        name = "Percentage of Records that a geoPoint can be Created",
+        type = "bar") %>%
+        layout(xaxis = x, yaxis = y)
+pl
+export(pl,file ="../data/summary/figures/asih-geopoint-summary-PLOTLY.png",vheight = 1080 )

@@ -1,4 +1,5 @@
 "Typestatus","Count"
+"",167452
 "voucher of malacosteus niger",49
 "voucher of manducus maderensis",42
 "voucher of semaprochilodus insignis",32
@@ -18,6 +19,7 @@
 "syntype of gymnocorymbus thayeri| paralectotype of gymnocorymbus thayeri",14
 "syntype of macrurus anguliceps| paralectotype of macrurus anguliceps",14
 "syntype of psectrogaster amazonica",14
+"additional material of brycon amazonicus",13
 "additional material of pseudoscopelus altipinnis",13
 "voucher of cryptacanthodes maculatus",13
 "voucher of hypoplectrus puella",13
@@ -25,6 +27,7 @@
 "voucher of symphurus tessellatus",13
 "paratype of stelliferus rastrifer",12
 "paratype of triakis barbouri",12
+"voucher of bajacalifornia megalops",12
 "voucher of liparis coheni",12
 "voucher of prochilodus vimboides",12
 "paratype of scopelarchoides danae",11
@@ -54,12 +57,14 @@
 "paratype of myctophum oculeum| paratype of electrona thompsoni| syntype of myctophum oculeum",8
 "voucher of apogon fasciatus",8
 "voucher of auchenipterichthys coracoideus",8
+"voucher of chaunax suttkusi",8
 "voucher of cyema atrum",8
 "voucher of gymnothorax eurostus",8
 "voucher of lycenchelys paxillus",8
 "voucher of malthopsis gnoma",8
 "voucher of pseudogramma thaumasium",8
 "voucher of spiniphryne gladisfenae",8
+"additional material of brycon opalinus",7
 "additional material of pseudoscopelus astronesthidens",7
 "genetic voucher of cetomimus",7
 "genetic voucher of cetostoma regani",7
@@ -93,6 +98,7 @@
 "paratype of pimelodella hasemani",6
 "syntype of dicrolene filamentosa",6
 "syntype of gasteropelecus pectorosus",6
+"syntype of genyanemus peruanus",6
 "syntype of hoplostethus mediterraneus sonodae",6
 "syntype of mixonus caudalis",6
 "syntype of pimelodella steindachneri",6
@@ -105,6 +111,8 @@
 "voucher of myxine glutinosa",6
 "voucher of plagioscion auratus",6
 "voucher of prochilodus hartii",6
+"additional material of brycon insignis",5
+"additional material of brycon melanopterus",5
 "figured of aetobatus narinari",5
 "paralectotype of astyanax fasciatus parahybae",5
 "paratype (ms) of paraliparis",5
@@ -124,8 +132,10 @@
 "voucher of amblyraja jenseni",5
 "voucher of apogon kallopterus",5
 "voucher of beryx splendens",5
+"voucher of bolinichthys indicus",5
 "voucher of careproctus reinhardti",5
 "voucher of caristiidae",5
+"voucher of diaphus lucidus",5
 "voucher of dysalotus alcocki",5
 "voucher of eustomias brevibarbatus",5
 "voucher of eustomias monodactylus",5
@@ -134,11 +144,11 @@
 "voucher of manducus greyae",5
 "voucher of pseudogramma polyacantha",5
 "voucher of rajella bigelowi",5
+"voucher of stemonosudis rothschildi",5
 "voucher of symphurus nigrescens",5
 "additional material of breviraja nigriventralis",4
 "additional material of diancistrus mennei",4
 "additional material of pseudoscopelus obtusifrons",4
-"figured of diaphus effulgens",4
 "figured of hymenocephalus italicus",4
 "figured of rhinoptera jussieui",4
 "genetic voucher of apristurus manis",4
@@ -161,6 +171,7 @@
 "paratype of elassoma boehlkei",4
 "paratype of etmopterus schultzi",4
 "paratype of liparis coheni",4
+"paratype of macrhybopsis",4
 "paratype of nanochromis parilus",4
 "paratype of raja (okamejei) schmidti",4
 "paratype of rivulus berovidesi",4
@@ -191,19 +202,21 @@
 "syntype of pseudopimelodus acanthochirus",4
 "syntype of pygidium immaculatum",4
 "syntype of raia scabrata",4
+"syntype of salmo agassizii",4
 "syntype of scorpaena rascacio",4
 "syntype of serranus bonaci| syntype of serranus bonaci",4
 "syntype of trachichthys mento",4
 "syntype of zygonectes dispar",4
-"syntype? of genyanemus peruanus",4
 "voucher of argyropelecus affinis",4
 "voucher of argyropelecus gigas",4
 "voucher of argyropelecus hemigymnus",4
 "voucher of bolinichthys distofax",4
+"voucher of bolinichthys longipes",4
 "voucher of bonapartia pedaliota",4
 "voucher of brotula barbata",4
+"voucher of diaphus dumerilii",4
 "voucher of gephyrocharax atricaudatus",4
-"voucher of lamprologus tigripictilis",4
+"voucher of neoscopelus macrolepidotus",4
 "voucher of ompok bimaculatus",4
 "voucher of opostomias micripinus",4
 "voucher of oxyurichthys lonchotus",4
@@ -213,11 +226,13 @@
 "voucher of polyipnus laternatus",4
 "voucher of pristigenys alta",4
 "voucher of symphysanodon berryi",4
+"additional material of brycon dulcis",3
 "additional material of caristius groenlandicus",3
 "additional material of nansenia oblita",3
 "additional material of raja macrophthalma",3
 "figured of chaenophryne longiceps",3
 "figured of cryptacanthodes maculatus",3
+"figured of diaphus effulgens",3
 "figured of diaphus lobatus",3
 "figured of galeorhinus laevis",3
 "figured of gigantura chuni",3
@@ -232,7 +247,6 @@
 "holotype of oligocephalus grahami",3
 "neotype of scarus miniofrenatus",3
 "paralectotype of curimatus dorsalis| syntype of curimatus dorsalis",3
-"paralectotype of gambusia puncticulata| syntype of gambusia puncticulata",3
 "paralectotype of gasteropelecus fasciatus| syntype of gasteropelecus fasciatus",3
 "paralectotype of labichthys bowersii",3
 "paralectotype of plecostomus affinis| syntype of plecostomus affinis",3
@@ -260,7 +274,6 @@
 "paratype of gobiosoma (elacatinus) illecebrosum",3
 "paratype of labeo henshawi",3
 "paratype of lamprologus tigripictilis",3
-"paratype of macrhybopsis",3
 "paratype of malacosteus australis",3
 "paratype of mastacembelus crassus",3
 "paratype of maurolicus weitzmani",3
@@ -326,7 +339,6 @@
 "syntype of plecostomus luetkeni| paralectotype of plecostomus luetkeni",3
 "syntype of porogadus atripectus",3
 "syntype of pristipoma panamense",3
-"syntype of salmo agassizii",3
 "syntype of scarus distinctus| syntype of scarus distinctus",3
 "syntype of scarus lateralis",3
 "syntype of serranus falcatus| syntype of serranus falcatus",3
@@ -345,24 +357,32 @@
 "voucher of aristostomias",3
 "voucher of astronesthes gudrunae",3
 "voucher of baldwinella vivianus",3
+"voucher of brachyhypopomus beebei",3
 "voucher of centropomus appendiculatus| syntype of centropomus appendiculatus| syntype of centropomus appendiculatus",3
 "voucher of chiasmodon niger",3
 "voucher of coilia grayi",3
 "voucher of creagrutus affinis",3
-"voucher of diaphus lucidus",3
+"voucher of diaphus effulgens",3
+"voucher of diaphus fragilis",3
+"voucher of diaphus rafinesquii",3
+"voucher of diaphus thiollierei",3
 "voucher of eustomias schiffi",3
 "voucher of eutropiichthys vacha",3
 "voucher of fluviphylax pygmaeus",3
 "voucher of gigantura chuni",3
+"voucher of gonichthys cocco",3
 "voucher of gymnocorymbus thayeri",3
 "voucher of gymnothorax miliaris",3
 "voucher of halobatrachus didactylus| voucher of halobatrachus didactylus",3
+"voucher of hygophum hygomii",3
 "voucher of hypoplectrus gemma",3
 "voucher of hyporhamphus quoyi",3
 "voucher of hyporhamphus unifasciatus",3
 "voucher of kali kerberti",3
 "voucher of kali macrodon",3
 "voucher of kali parri",3
+"voucher of lampadena speculigera",3
+"voucher of lamprologus tigripictilis",3
 "voucher of lepomis microlophus",3
 "voucher of liparis inquilinus",3
 "voucher of lophiodes reticulatus",3
@@ -371,7 +391,6 @@
 "voucher of nectamia fusca",3
 "voucher of nectamia luxuria",3
 "voucher of neonesthes capensis",3
-"voucher of neoscopelus macrolepidotus",3
 "voucher of ophichthus remiger",3
 "voucher of ophidion grayi",3
 "voucher of oxyurichthys auchenolepis",3
@@ -402,7 +421,6 @@
 "figured of diaphus brachycephalus",2
 "figured of diaphus malayanus",2
 "figured of diaphus mollis",2
-"figured of diaphus parri",2
 "figured of diaphus problematicus",2
 "figured of diaphus taaningi",2
 "figured of eustomias",2
@@ -433,6 +451,7 @@
 "paralectotype of cyprinodon latifasciatus",2
 "paralectotype of dibranchichthys nudivomer| syntype of dibranchichthys nudivomer",2
 "paralectotype of dibranchus hystrix| syntype of dibranchus hystrix",2
+"paralectotype of gambusia puncticulata| syntype of gambusia puncticulata| paralectotype of gambusia puncticulata",2
 "paralectotype of hadropterus notogrammus| paralectotype of hadropterus maculatus",2
 "paralectotype of harttia loricariformis| syntype of harttia loricariformis",2
 "paralectotype of macrurus boops",2
@@ -581,10 +600,10 @@
 "syntype of farlowella carinata| paralectotype of farlowella carinata",2
 "syntype of fundulus tenellus",2
 "syntype of fundulus xenicus",2
+"syntype of gambusia punctata",2
 "syntype of gambusia tridentiger",2
 "syntype of gasterosteus nebulosus",2
 "syntype of genyanemus brasiliensis",2
-"syntype of genyanemus peruanus",2
 "syntype of gila conspersa",2
 "syntype of girardinus creolus",2
 "syntype of girardinus sonoriensis",2
@@ -615,6 +634,7 @@
 "syntype of malthopsis sparsa| paralectotype of malthopsis sparsa",2
 "syntype of moenkhausia lepidurus icae",2
 "syntype of monolene maculipinna",2
+"syntype of morrhua americana",2
 "syntype of mugil lebranchus",2
 "syntype of myctophum aurolaternatum",2
 "syntype of myxine circifrons",2
@@ -645,7 +665,6 @@
 "syntype of rhinichthys ocella",2
 "syntype of salmo siscowet",2
 "syntype of saraca opercularis",2
-"syntype of sardinia pseudohispanica| syntype of sardinia pseudohispanica",2
 "syntype of sargus pourtalesii",2
 "syntype of scarus squalidus| syntype of scarus squalidus",2
 "syntype of serranus apiarius",2
@@ -666,7 +685,7 @@
 "syntype of zygonectes lineatus",2
 "syntype? of engraulis perfasciatus",2
 "syntype? of halieutaea spongiosa",2
-"type? of gambusia punctata| syntype of gambusia punctata",2
+"type of acipenser (antaceus) ayresii",2
 "voucher of acantharchus pomotis",2
 "voucher of aphanotorulus unicolor",2
 "voucher of apogon exostigma",2
@@ -678,31 +697,49 @@
 "voucher of batrachoides boulengeri",2
 "voucher of batrachoides surinamensis",2
 "voucher of batrachus pacifici",2
+"voucher of benthosema glaciale",2
+"voucher of benthosema pterotum",2
 "voucher of beryx decadactylus",2
-"voucher of bolinichthys indicus",2
-"voucher of bolinichthys longipes",2
+"voucher of bolinichthys photothorax",2
+"voucher of bolinichthys supralateralis",2
+"voucher of brachyhypopomus brevirostris",2
+"voucher of callochromis pleurospilus",2
+"voucher of centrobranchus nigroocellatus",2
 "voucher of centropomus viridis",2
 "voucher of chaca bankanensis",2
 "voucher of chimaera cubana",2
 "voucher of chlamydoselachus anguineus",2
+"voucher of copadichromis quadrimaculatus",2
 "voucher of creagrutus flavescens",2
 "voucher of cyclothone",2
 "voucher of dasyatis americana",2
-"voucher of diaphus dumerilii",2
-"voucher of diaphus regani",2
+"voucher of diaphus brachycephalus",2
+"voucher of diaphus holti",2
+"voucher of diaphus hudsoni",2
+"voucher of diaphus luetkeni",2
+"voucher of diaphus mollis",2
+"voucher of diaphus ostenfeldi",2
+"voucher of diaphus problematicus",2
 "voucher of diaphus signatus",2
+"voucher of diaphus termophilus",2
 "voucher of dicrolene",2
+"voucher of diplotaxodon argenteus",2
 "voucher of diretmoides pauciradiatus",2
 "voucher of dolichopteroides binocularis",2
 "voucher of echidna catenata",2
 "voucher of echiostoma barbatum",2
+"voucher of ectodus descampsii",2
+"voucher of electrona risso",2
 "voucher of flagellostomias boureei",2
 "voucher of fundulus heteroclitus",2
 "voucher of gigantura indica",2
-"voucher of gonichthys cocco",2
+"voucher of gobiesox adustus",2
+"voucher of gonichthys barnesi",2
 "voucher of gymnocorymbus bondi",2
+"voucher of gymnoscopelus braueri",2
 "voucher of haemulon jeniguano",2
 "voucher of hemirhamphodon pogonognathus",2
+"voucher of hygophum taaningi",2
 "voucher of hymenocephalus billsam",2
 "voucher of hyporhamphus sajori",2
 "voucher of ichthyoelephas humeralis| figured of ichthyoelephas humeralis",2
@@ -710,25 +747,40 @@
 "voucher of kali indica",2
 "voucher of kali macrura",2
 "voucher of laemonema laureysi",2
+"voucher of lampadena chavesi",2
+"voucher of lampadena luminosa",2
+"voucher of lampanyctus photonotus",2
+"voucher of lampanyctus vadulus",2
 "voucher of lamprogrammus niger",2
 "voucher of lamprologus werneri",2
+"voucher of lepidophanes gaussi",2
 "voucher of lepophidium jeannae",2
 "voucher of leptocypris weynsii",2
+"voucher of limnochromis auritus",2
 "voucher of loricaria cataphracta",2
 "voucher of luvarus imperialis",2
 "voucher of manta birostris",2
 "voucher of micropterus salmoides",2
+"voucher of myctophum phengodes",2
 "voucher of naso",2
+"voucher of notolychnus valdiviae",2
+"voucher of notoscopelus caudispinosus",2
+"voucher of nyassachromis leuciscus",2
 "voucher of oncorhynchus clarki stomias",2
+"voucher of ophthalmotilapia nasuta",2
+"voucher of oreochromis esculentus",2
+"voucher of otopharynx argyrosoma",2
 "voucher of pachypops fourcroi",2
 "voucher of paracanthocobitis mackenziei",2
 "voucher of paracanthocobitis mooreh",2
 "voucher of parodon caliensis",2
 "voucher of percina copelandi x percina caproides",2
 "voucher of petromyzon marinus",2
+"voucher of petrotilapia",2
 "voucher of photonectes",2
 "voucher of photonectes braueri",2
 "voucher of photonectes margarita",2
+"voucher of plecodus paradoxus",2
 "voucher of polyipnus polli",2
 "voucher of poromitra frontosa| syntype of melamphaes frontosus",2
 "voucher of prochilodus argenteus",2
@@ -752,14 +804,30 @@
 "voucher of sternopygus obtusirostris",2
 "voucher of stomias boa ferox",2
 "voucher of stylephorus chordatus",2
+"voucher of symbolophorus boops",2
+"voucher of symbolophorus evermanni",2
+"voucher of symbolophorus kreffti",2
+"voucher of symbolophorus rufinus",2
 "voucher of synodus synodus",2
+"voucher of taaningichthys bathyphilus",2
+"voucher of telmatochromis dhonti",2
 "voucher of thrissocles dussumieri",2
 "voucher of tridensimilis brevis",2
 "voucher of umbra limi",2
+"voucher of yssichromis argens",2
 "additional material of alectrias benjamini",1
 "additional material of alosa aestivalis",1
 "additional material of astronesthes kreffti| figured of astronesthes kreffti",1
 "additional material of bolinichthys nikolayi",1
+"additional material of brachyhypopomus brevirostris",1
+"additional material of brycon falcatus",1
+"additional material of brycon ferox",1
+"additional material of brycon gouldingi",1
+"additional material of brycon hilarii",1
+"additional material of brycon orbignyanus",1
+"additional material of brycon orthotaenia",1
+"additional material of brycon vermelha",1
+"additional material of brycon vonoi",1
 "additional material of callanthias ruber",1
 "additional material of carapus acus",1
 "additional material of catostomus commersonii",1
@@ -769,6 +837,7 @@
 "additional material of curimata macrops",1
 "additional material of cyprinus carpio",1
 "additional material of dorosoma cepedianum",1
+"additional material of erotelis valenciennesi",1
 "additional material of eustomias bituberoides",1
 "additional material of fluviphylax zonatus",1
 "additional material of gigantactis elsmani",1
@@ -794,6 +863,7 @@
 "additional material of ophidion marginatum",1
 "additional material of orestias ascotanensis",1
 "additional material of oxyropsis acutirostra",1
+"additional material of pagellus caninus",1
 "additional material of paracanthocobitis zonalterans",1
 "additional material of phoxinus eos",1
 "additional material of pimephales anuli",1
@@ -815,6 +885,7 @@
 "additional material of springeria folirostris| voucher of anacanthobatis (springeria) folirostris",1
 "additional material of symphurus",1
 "additional material of xenocypris compressus",1
+"cotype of sardinia pseudohispanica",1
 "erroneous citation of chiasmodon niger",1
 "erroneous citation of epigonus",1
 "erroneous citation of lepophidium crossotum",1
@@ -837,6 +908,9 @@
 "figured of bathypterois longipes",1
 "figured of bathysaurus ferox",1
 "figured of benthosema glaciale",1
+"figured of brycon ferox",1
+"figured of brycon insignis",1
+"figured of brycon opalinus",1
 "figured of callorhinchus tritoris",1
 "figured of caranx crysos",1
 "figured of carcharodon carcharias",1
@@ -849,6 +923,7 @@
 "figured of champsodon atridorsalis",1
 "figured of champsodon longipinnis| voucher of champsodon longipinnis",1
 "figured of chauliodus sloani",1
+"figured of chaunax pictus",1
 "figured of cheilio inermis",1
 "figured of chimaera monstrosa",1
 "figured of chlopsis bicolor",1
@@ -861,11 +936,11 @@
 "figured of diaphus diademophilus",1
 "figured of diaphus dumerilii",1
 "figured of diaphus fragilis",1
-"figured of diaphus garmani",1
 "figured of diaphus holti",1
 "figured of diaphus kapalae",1
 "figured of diaphus luetkeni",1
 "figured of diaphus minax",1
+"figured of diaphus parri",1
 "figured of diaphus phillipsi",1
 "figured of diaphus regani",1
 "figured of diaphus splendidus",1
@@ -884,10 +959,12 @@
 "figured of ginglymostoma cirratum",1
 "figured of gobius hemigymnus| holotype of gobius hemigymnus",1
 "figured of hemirhamphodon kuekenthali",1
+"figured of hemitilapia oxyrhynchus",1
 "figured of heptranchias perlo",1
 "figured of heteroscymnus longus",1
 "figured of huso huso",1
 "figured of hygophum hygomii",1
+"figured of hygophum macrochir",1
 "figured of hymenocephalus atterrimus",1
 "figured of hymenocephalus billsam",1
 "figured of hypoplectrus indigo",1
@@ -919,10 +996,12 @@
 "figured of mobula hypostoma",1
 "figured of mustelus norrisi",1
 "figured of mustelus schmidti",1
+"figured of myctophum obtusirostre",1
 "figured of myctophum punctatum",1
 "figured of myliobatis aquila",1
 "figured of myripristinae| voucher of holocentrinae",1
 "figured of nandopsis haitiensis",1
+"figured of nannobrachium cuprarium",1
 "figured of narcacion marmoratus",1
 "figured of narcine brasiliensis",1
 "figured of naucrates ductor",1
@@ -978,7 +1057,6 @@
 "figured of squalus americanus",1
 "figured of stemonosudis siliquiventer",1
 "figured of sternarchorhynchus curvirostris| voucher of sternarchorhynchus curvirostris",1
-"figured of symbolophorus veranyi",1
 "figured of thuliopiaba pycnodon",1
 "figured of tomicodon zebra",1
 "figured of torpedo californica",1
@@ -990,15 +1068,29 @@
 "figured of urotrygon mundus",1
 "figured of zanclus cornutus",1
 "figured of zu cristatus",1
+"genetic voucher of bathylagus euryops",1
+"genetic voucher of benthosema glaciale",1
+"genetic voucher of bolinichthys indicus",1
 "genetic voucher of carcharhinus plumbeus",1
+"genetic voucher of centrobranchus nigroocellatus",1
 "genetic voucher of centroscyllium fabricii",1
 "genetic voucher of centroscymnus coelolepis",1
 "genetic voucher of cetomimus craneae",1
+"genetic voucher of diaphus effulgens",1
 "genetic voucher of etmopterus gracilispinis",1
 "genetic voucher of etmopterus princeps",1
+"genetic voucher of fundulus diaphanus",1
+"genetic voucher of gonichthys cocco",1
 "genetic voucher of gyrinomimus",1
 "genetic voucher of gyrinomimus bruuni",1
 "genetic voucher of gyrinomimus myersi",1
+"genetic voucher of lampadena speculigera",1
+"genetic voucher of lampanyctus macdonaldi",1
+"genetic voucher of lepidophanes guentheri",1
+"genetic voucher of melamphaes suborbitalis",1
+"genetic voucher of myctophum affine",1
+"genetic voucher of notoscopelus caudispinosus",1
+"genetic voucher of pontinus rathbuni",1
 "genetic voucher of squalus cubensis",1
 "holotype (ms) of boleosoma tenue",1
 "holotype (ms) of brienomyrus",1
@@ -1045,6 +1137,7 @@
 "holotype of acipenser (huso) rauchii",1
 "holotype of acipenser (huso) storeri",1
 "holotype of acipenser carbonarius",1
+"holotype of acipenser rhynchaeus",1
 "holotype of acrossocheilus schroederi",1
 "holotype of ageneiosus atronasus",1
 "holotype of ahynnodontophis rosaliae| figured of ahynnodontophis rosaliae",1
@@ -1381,7 +1474,6 @@
 "holotype of lestidium bigelowi",1
 "holotype of leucicorus lusciosus",1
 "holotype of leuciscus obesus",1
-"holotype of limia pavonina| syntype of limia pavonina",1
 "holotype of limia sulphurophila",1
 "holotype of linophryne algibarbata",1
 "holotype of linophryne longibarbata",1
@@ -1671,8 +1763,6 @@
 "holotype of zeus ocellatus",1
 "holotype of zoogoneticus zonistius",1
 "holotype of zygonectes hieroglyphicus",1
-"holotype? of acipenser (antaceus) ayresii",1
-"holotype? of acipenser rhynchaeus",1
 "lectotype of astyanax anterior",1
 "lectotype of astyanax fasciatus parahybae",1
 "lectotype of astyanax scabripinnis intermedius| lectotype of astyanax scabripinnis intermedius",1
@@ -1696,7 +1786,7 @@
 "lectotype of dibranchus scaber| syntype of dibranchus scaber",1
 "lectotype of diplesion fasciatus| lectotype of diplesion fasciatus",1
 "lectotype of elanura forficata",1
-"lectotype of gambusia puncticulata",1
+"lectotype of gambusia puncticulata| lectotype of gambusia puncticulata",1
 "lectotype of gasteropelecus fasciatus| syntype of gasteropelecus fasciatus",1
 "lectotype of grystes nobilis",1
 "lectotype of heptapterus eigenmanni| syntype of heptapterus eigenmanni",1
@@ -1734,7 +1824,7 @@
 "neotype of hiodon tergisus",1
 "neotype of sternoptyx diaphana",1
 "neotype of thaumastomias atrox",1
-"neotype of verilus sordidus| holotype of verilus sordidus| holotype of verilus sordidus| voucher of verilus sordidus",1
+"neotype of verilus sordidus| holotype of verilus sordidus| holotype of verilus sordidus| voucher of verilus sordidus| figured of verilus sordidus",1
 "paralectotype of acanthocottus laticeps",1
 "paralectotype of alburnus megalops",1
 "paralectotype of alvordius evides| syntype of alvordius evides",1
@@ -1778,6 +1868,7 @@
 "paralectotype of etheostoma roanoka",1
 "paralectotype of eviota zonura",1
 "paralectotype of fundulus dugesii",1
+"paralectotype of gambusia puncticulata| syntype of gambusia puncticulata",1
 "paralectotype of gasteropelecus fasciatus",1
 "paralectotype of gillichthys detrusus| paratype of gillichthys detrusus",1
 "paralectotype of grystes nobilis",1
@@ -1861,7 +1952,6 @@
 "paralectotype of xenochirus triacanthus",1
 "paralectotype of zenarchopterus vaisiganus",1
 "paralectotype of zygonectes rubrifrons| paralectotype of zygonectes rubrifrons",1
-"paratopotype of macrhybopsis",1
 "paratopotype of percina aurora",1
 "paratopotype of percina brevicauda",1
 "paratype (ms) of aplocheilichthys (congopanchax)",1
@@ -1921,7 +2011,7 @@
 "paratype of aporops bilinearis| voucher of aporops bilinearis",1
 "paratype of apristurus melanoasper",1
 "paratype of apteronotus anu",1
-"paratype of apteronotus caudimaculosus| voucher of apteronotus caudimaculosus",1
+"paratype of apteronotus caudimaculosus| voucher of apteronotus caudimaculosus| voucher of apteronotus caudimaculosus",1
 "paratype of apteronotus cuchillo",1
 "paratype of apteronotus cuchillo| voucher of apteronotus cuchillo| voucher of apteronotus cuchillo",1
 "paratype of arcos decoris",1
@@ -2200,6 +2290,7 @@
 "paratype of lampanyctus photothorax",1
 "paratype of lampanyctus supralateralis",1
 "paratype of lamprologus lethops| figured of lamprologus lethops",1
+"paratype of lamprologus markerti",1
 "paratype of lamprologus teugelsi",1
 "paratype of lasiancistrus brevispinis",1
 "paratype of lasiancistrus maracaiboensis",1
@@ -2505,7 +2596,6 @@
 "paratype of zaphotias nudum",1
 "paratype of zoarchias veneficus",1
 "paratype of zygonectes craticula",1
-"paratype? of erotelis valenciennesi",1
 "paratype? of gnathopogon intermedius",1
 "paratype? of hemiculter hainanensis",1
 "paratype? of ischikauia hainanensis",1
@@ -2517,6 +2607,8 @@
 "paratype? of pseudorasbora depressirostris",1
 "paratype? of rasborinus hainanensis",1
 "paratype? of zingel streber nerensis",1
+"syntype of acipenser (antaceus) lecontei",1
+"syntype of acipenser laevis",1
 "syntype of agosia chrysogaster",1
 "syntype of agosia metallica",1
 "syntype of alburnellus amoenus| voucher of alburnellus amoenus",1
@@ -2534,6 +2626,7 @@
 "syntype of alepocephalus convexifrons",1
 "syntype of alestes (alestes) wytsi",1
 "syntype of algansea formosa",1
+"syntype of amblodon concinnus| paralectotype of amblodon concinnus",1
 "syntype of amia binotata| syntype of amia binotata",1
 "syntype of ammocoetes borealis",1
 "syntype of ancistrus chagresi",1
@@ -2565,8 +2658,10 @@
 "syntype of atopichthys esunculus",1
 "syntype of atopichthys falcidens",1
 "syntype of auchenipterus (pseudauchenipterus) striatulus",1
+"syntype of barbus jerdoni",1
 "syntype of barbus moulouyensis grandisquamata",1
 "syntype of barbus thomassi",1
+"syntype of barbus wynaadensis",1
 "syntype of bassozetus nasus| lectotype of bassozetus nasus",1
 "syntype of bathyagonus nigripinnis",1
 "syntype of belone melanochira",1
@@ -2622,6 +2717,7 @@
 "syntype of chalcinus angulatus signatus",1
 "syntype of characodon furcidens",1
 "syntype of characodon garmani",1
+"syntype of chela boopis",1
 "syntype of cheonda modesta",1
 "syntype of chimaera media",1
 "syntype of chloroscombrus caribbaeus",1
@@ -2645,6 +2741,8 @@
 "syntype of corvina stearnsii",1
 "syntype of coryphopterus glaucofraenum",1
 "syntype of cottus aleuticus",1
+"syntype of cottus minutus volki",1
+"syntype of cottus viscosus",1
 "syntype of cremnobates integripinnis",1
 "syntype of curimatus bimaculatus| lectotype of curimatus bimaculatus",1
 "syntype of curimatus bimaculatus| paralectotype of curimatus bimaculatus",1
@@ -2719,6 +2817,7 @@
 "syntype of gambusia holbrooki",1
 "syntype of gasteropelecus fasciatus| paralectotype of gasteropelecus fasciatus",1
 "syntype of gasterosteus inopinatus",1
+"syntype of gasterosteus microcephalus",1
 "syntype of gasterosteus plebeius",1
 "syntype of genytremus interruptus",1
 "syntype of geophagus (mesops) agassizii| paralectotype of apistogramma agassizii",1
@@ -2805,6 +2904,7 @@
 "syntype of hyphessobrycon panamensis",1
 "syntype of hyphessobrycon serpae",1
 "syntype of hypsilepis iris",1
+"syntype of hypsophrys unimaculatus| syntype of hypsophrys unimaculatus",1
 "syntype of icelinus cavifrons",1
 "syntype of ichthyobus rauchii",1
 "syntype of ichthyobus stolleyi",1
@@ -2828,12 +2928,14 @@
 "syntype of leuciscus copii| syntype of alburnellus jaculus",1
 "syntype of leuciscus frontalis",1
 "syntype of leuciscus gracilis",1
+"syntype of leuciscus rodens",1
 "syntype of leuciscus zunnensis| syntype of gila gracilis",1
 "syntype of leucosomus occidentalis",1
 "syntype of leucosomus pallidus",1
 "syntype of limanda proboscidea",1
 "syntype of limia cubensis",1
 "syntype of limia cubensis| syntype of limia cubensis",1
+"syntype of limia pavonina| holotype of limia pavonina",1
 "syntype of liopropoma rubre| holotype of liopropoma rubre",1
 "syntype of liparis agassizii| syntype of liparis agassizii",1
 "syntype of lophiomus caulinaris| lectotype of lophiomus caulinaris",1
@@ -2895,10 +2997,10 @@
 "syntype of moniana rutila",1
 "syntype of moniana tristis| paralectotype of moniana tristis| paralectotype of moniana tristis",1
 "syntype of morone interrupta| syntype of morone mississippiensis",1
-"syntype of morrhua americana",1
 "syntype of moxostoma claviformis",1
 "syntype of moxostoma kennerlii",1
 "syntype of moxostoma tenue",1
+"syntype of mugil hamiltonii",1
 "syntype of mycteroperca calliura| syntype of mycteroperca calliura",1
 "syntype of myctophum tenuiculum",1
 "syntype of myctophum townsendi",1
@@ -2995,9 +3097,15 @@
 "syntype of pristipoma spleniatum| syntype of pristipoma spleniatum",1
 "syntype of psectrogaster amazonica| paralectotype of psectrogaster amazonica",1
 "syntype of psettus (parapsettus) panamensis",1
+"syntype of pseudobagrus chryseus",1
 "syntype of pseudoscarus gnathodus| syntype of pseudoscarus gnathodus",1
 "syntype of psychrolutes zebra",1
 "syntype of pteraclis fasciatus| paralectotype of pteraclis fasciatus| paralectotype of pteraclis fasciatus| voucher of pteraclis fasciatus",1
+"syntype of puntius dubius",1
+"syntype of puntius lepidus",1
+"syntype of puntius parrah",1
+"syntype of puntius punctatus",1
+"syntype of puntius vittatus",1
 "syntype of pygidium immaculatum| voucher of pygidium immaculatum| voucher of pygidium immaculatum| voucher of pygidium immaculatum",1
 "syntype of pygidium oroyae| voucher of pygidium oroyae| voucher of pygidium oroyae",1
 "syntype of pyrrhulina brevis| paralectotype of pyrrhulina brevis",1
@@ -3013,10 +3121,11 @@
 "syntype of rhodeus syriacus",1
 "syntype of richardsonius lateralis",1
 "syntype of rivulus cylindraceus| holotype of rivulus cylindraceus| lectotype of rivulus cylindraceus| holotype of rivulus cylindraceus",1
-"syntype of rivulus cylindraceus| paratype of rivulus cylindraceus| paralectotype of rivulus cylindraceus",1
+"syntype of rivulus cylindraceus| paralectotype of rivulus cylindraceus| paratype of rivulus cylindraceus",1
 "syntype of rivulus cylindraceus| paratype of rivulus cylindraceus| paralectotype of rivulus cylindraceus| paratype of rivulus cylindraceus",1
 "syntype of salarias sertatus",1
 "syntype of salmo trutta pellegrini",1
+"syntype of sardinia pseudohispanica",1
 "syntype of sargus caribaeus| syntype of sargus caribaeus",1
 "syntype of sargus caudimacula| syntype of sargus caudimacula",1
 "syntype of scarus brachialis| holotype of scarus brachialis",1
@@ -3102,49 +3211,20 @@
 "syntype of zygonectes lateralis",1
 "syntype of zygonectes lineolatus",1
 "syntype of zygonectes zonatus",1
-"syntype? of acipenser (antaceus) ayresii",1
-"syntype? of acipenser (antaceus) lecontei",1
-"syntype? of acipenser laevis",1
-"syntype? of amblodon concinnus| paralectotype of amblodon concinnus",1
 "syntype? of anostomus varius",1
-"syntype? of barbus jerdoni",1
-"syntype? of barbus wynaadensis",1
-"syntype? of chela boopis",1
-"syntype? of cottus minutus volki",1
-"syntype? of cottus viscosus",1
 "syntype? of curimatus serpae",1
-"syntype? of cyprinus curmuca",1
 "syntype? of engraulis cubanus",1
-"syntype? of gasterosteus microcephalus",1
 "syntype? of hyostoma simoterum",1
-"syntype? of hypsophrys unimaculatus| syntype? of hypsophrys unimaculatus",1
 "syntype? of leporinus copelandii",1
-"syntype? of leuciscus rodens",1
 "syntype? of liparis fucensis",1
 "syntype? of lutjanus campechanus",1
-"syntype? of morrhua americana",1
-"syntype? of mugil hamiltonii",1
 "syntype? of otocinclus affinis",1
-"syntype? of puntius dubius",1
-"syntype? of puntius lepidus",1
-"syntype? of puntius parrah",1
-"syntype? of puntius punctatus",1
-"syntype? of puntius vittatus",1
-"syntype? of salmo agassizii",1
+"syntype? of pleuronectes maculiferus",1
 "syntype? of scorpaena occipitalis",1
 "syntype? of scorpaena rascacio",1
 "syntype? of serranus dubius",1
 "syntype? of serranus felinus| holotype of serranus felinus",1
 "syntype? of zygonectes olivaceus",1
-"type? of barbus mysorensis",1
-"type? of haemulon notatum",1
-"type? of holacanthus clarionensis",1
-"type? of pagellus caninus",1
-"type? of pleuronectes maculiferus",1
-"type? of pseudobagrus chryseus",1
-"type? of salarias margaritaceus",1
-"type? of stellifer ephelis",1
-"type? of upeneus flavovittatus",1
 "voucher of abramites hypselonotus",1
 "voucher of abyssobrotula galathae",1
 "voucher of acarichthys heckelii",1
@@ -3179,8 +3259,10 @@
 "voucher of apogon queketti",1
 "voucher of apogon savayensis",1
 "voucher of apteronotus albifrons",1
+"voucher of apteronotus albifrons| figured of apteronotus albifrons| voucher of apteronotus albifrons",1
 "voucher of apteronotus albifrons| voucher of apteronotus albifrons",1
-"voucher of apteronotus rostratus",1
+"voucher of apteronotus rostratus| voucher of apteronotus rostratus",1
+"voucher of arcos rhodospilus",1
 "voucher of argonectes longiceps",1
 "voucher of argyropelecus lychnus",1
 "voucher of aristochromis christyi",1
@@ -3188,6 +3270,7 @@
 "voucher of aristostomias xenostoma",1
 "voucher of arothron meleagris",1
 "voucher of astatoreochromis alluaudi",1
+"voucher of astatotilapia barbarae",1
 "voucher of astatotilapia elegans",1
 "voucher of astroblepus whymperi",1
 "voucher of astronesthes",1
@@ -3198,6 +3281,7 @@
 "voucher of aulonocranus dewindti",1
 "voucher of aulopus japonicus",1
 "voucher of australoheros",1
+"voucher of bajacalifornia calcarata",1
 "voucher of baldwinella aureorubens| voucher of pronotogrammus aureorubens",1
 "voucher of baldwinella eos",1
 "voucher of baldwinella eos| figured of baldwinella eos",1
@@ -3206,13 +3290,16 @@
 "voucher of bathophilus ater",1
 "voucher of bathophilus kingi",1
 "voucher of bathophilus metallicus",1
-"voucher of bathybates fasciatus",1
+"voucher of bathybates graueri",1
+"voucher of bathybates leo",1
+"voucher of bathybates minor",1
+"voucher of bathychaunax roseus",1
 "voucher of bathylagus bericoides",1
 "voucher of bathypterois",1
 "voucher of bathysaurus ferox",1
 "voucher of benitochromis batesii",1
 "voucher of benthalbella linguidens",1
-"voucher of benthochromis tricot",1
+"voucher of benthosema suborbitale",1
 "voucher of beryx decadactylus| voucher of beryx decadactylus",1
 "voucher of beryx| voucher of beryx splendens",1
 "voucher of biotodoma cupido",1
@@ -3222,25 +3309,31 @@
 "voucher of borostomias antarcticus",1
 "voucher of boulengerochromis microlepis",1
 "voucher of brachaelurus waddi",1
+"voucher of brachyhypopomus bennetti",1
+"voucher of buccochromis atritaeniatus",1
 "voucher of buccochromis lepturus",1
 "voucher of bujurquina",1
 "voucher of callionymidae",1
-"voucher of callochromis pleurospilus",1
+"voucher of callochromis macrops",1
 "voucher of caprichromis orthognathus",1
 "voucher of caprodon longimanus",1
 "voucher of caquetaia myersi",1
 "voucher of caracanthus maculatus",1
 "voucher of caranx gallus",1
+"voucher of carcharias",1
+"voucher of carcharias melanopterus",1
 "voucher of carcharias taurus",1
 "voucher of carcharodon carcharias| voucher of carcharias taurus| voucher of carcharodon carcharias",1
 "voucher of cardiopharynx schoutedeni",1
 "voucher of caristius groenlandicus",1
-"voucher of centrobranchus nigroocellatus",1
 "voucher of centrophorus uyato",1
 "voucher of centropomus mexicanus| holotype of centropomus parallelus",1
 "voucher of centropomus parallelus",1
-"voucher of centroscymnus owstonii",1
+"voucher of centroscymnus owstonii| voucher of centroscymnus owstonii",1
 "voucher of ceratias tentaculatus",1
+"voucher of ceratoscopelus maderensis",1
+"voucher of ceratoscopelus townsendi",1
+"voucher of ceratoscopelus warmingii",1
 "voucher of cetorhinus maximus",1
 "voucher of chaetobranchopsis orbicularis",1
 "voucher of chalinochromis brichardi",1
@@ -3270,7 +3363,9 @@
 "voucher of coilia grayi| voucher of coilia grayi",1
 "voucher of coilia mystus",1
 "voucher of congoglanis alula",1
-"voucher of copadichromis quadrimaculatus",1
+"voucher of copadichromis chrysonotus",1
+"voucher of copadichromis mloto",1
+"voucher of copadichromis trimaculatus",1
 "voucher of corematodus taeniatus",1
 "voucher of coryphaena hippurus",1
 "voucher of coryphaenoides carapinus",1
@@ -3283,6 +3378,7 @@
 "voucher of crenicichla johanna",1
 "voucher of cryptoheros cutteri",1
 "voucher of ctenochromis horei",1
+"voucher of ctenochromis horii",1
 "voucher of ctenopharynx intermedius",1
 "voucher of cunningtonia longiventralis",1
 "voucher of curimata ciliata",1
@@ -3293,16 +3389,26 @@
 "voucher of cyphotilapia frontosa",1
 "voucher of cyprinodon variegatus",1
 "voucher of cyrtocara moorii",1
-"voucher of diaphus effulgens",1
-"voucher of diaphus fragilis",1
-"voucher of diaphus thiollierei",1
+"voucher of diaphus anderseni",1
+"voucher of diaphus arabicus",1
+"voucher of diaphus effulgens| figured of diaphus effulgens",1
+"voucher of diaphus garmani",1
+"voucher of diaphus garmani| figured of diaphus garmani",1
+"voucher of diaphus metapoclampus",1
+"voucher of diaphus parri| figured of diaphus parri",1
+"voucher of diaphus perspicillatus",1
+"voucher of diaphus regani",1
+"voucher of diaphus regani| voucher of diaphus regani",1
+"voucher of diaphus splendidus",1
+"voucher of diaphus taaningi",1
+"voucher of diaphus vanhoeffeni",1
 "voucher of dicrolene introniger",1
 "voucher of dicrossus maculatus",1
 "voucher of dimidiochromis compressiceps",1
+"voucher of diogenichthys atlanticus",1
 "voucher of diplacanthopoma brachysoma",1
 "voucher of diplomystes chilensis",1
 "voucher of diplophos taenia| voucher of diplophos taenia",1
-"voucher of diplotaxodon argenteus",1
 "voucher of diretmus argenteus",1
 "voucher of ditrema temminickii",1
 "voucher of docimodus johnstoni",1
@@ -3310,8 +3416,7 @@
 "voucher of dolichopteryx rostrata",1
 "voucher of echidna nebulosa",1
 "voucher of echidna polyzona",1
-"voucher of ectodus descampsii",1
-"voucher of electrona risso",1
+"voucher of electrona antarctica",1
 "voucher of embiotoca jacksoni",1
 "voucher of embiotoca lateralis",1
 "voucher of enchelycore anatina",1
@@ -3319,7 +3424,7 @@
 "voucher of epigonus macrops",1
 "voucher of epigonus occidentalis",1
 "voucher of eremophilus mutisii| voucher of eremophilus mutisii",1
-"voucher of eretmodus cyanostictus",1
+"voucher of eretmodus cyanostictus| voucher of eretmodus cyanostictus",1
 "voucher of erimyzon oblongus",1
 "voucher of esox americanus americanus",1
 "voucher of esox lucius| voucher of esox lucius",1
@@ -3352,9 +3457,11 @@
 "voucher of ginglymostoma cirratum",1
 "voucher of glanidium melanopterum",1
 "voucher of glyphidodon rudis",1
+"voucher of gobiesox daedaleus brachysoma",1
 "voucher of gobiesox maeandricus",1
-"voucher of gobiesox papillifer| voucher of gobiesox papillifer| figured of gobiesox papillifer",1
-"voucher of gonichthys barnesi",1
+"voucher of gobiesox papillifer",1
+"voucher of gobiesox papillifer| voucher of gobiesox papillifer| figured of gobiesox papillifer| voucher of gobiesox papillifer",1
+"voucher of gonichthys tenuiculus",1
 "voucher of gonostoma elongatum",1
 "voucher of grammatotria lemairii",1
 "voucher of guianacara geayi",1
@@ -3367,7 +3474,11 @@
 "voucher of gymnotus carapo| additional material of gymnotus curupira",1
 "voucher of haemulon taeniatum",1
 "voucher of halosaurus nigerrimus",1
+"voucher of haplochromis kribensis",1
 "voucher of haplochromis lividus",1
+"voucher of haplotaxodon tricoti| voucher of benthochromis tricot",1
+"voucher of harpagochromis diplotaenia",1
+"voucher of harpagochromis guiarti",1
 "voucher of hemanthias aureorubens",1
 "voucher of hemibates stenosoma",1
 "voucher of hemichromis fasciatus",1
@@ -3380,9 +3491,15 @@
 "voucher of holocentrinae| voucher of holocentrinae",1
 "voucher of holocentrum prospinosum| lectotype of holocentrum prospinosum",1
 "voucher of holocentrus suborbitalis",1
+"voucher of hoplotilapia retrodens",1
 "voucher of huso dauricus",1
 "voucher of hybognathus punctifer",1
-"voucher of hygophum hygomii",1
+"voucher of hygophum benoiti",1
+"voucher of hygophum brunni",1
+"voucher of hygophum hanseni",1
+"voucher of hygophum macrochir",1
+"voucher of hygophum proximum",1
+"voucher of hygophum reinhardtii",1
 "voucher of hymenocephalus italicus",1
 "voucher of hyperprosopon ellipticum",1
 "voucher of hypoplectrus aberrans",1
@@ -3398,11 +3515,30 @@
 "voucher of kali",1
 "voucher of labeotropheus",1
 "voucher of laetacara flavilabris",1
+"voucher of lampadena pontifex",1
+"voucher of lampadena urophaos",1
+"voucher of lampanyctodes hectoris",1
+"voucher of lampanyctus alatus",1
+"voucher of lampanyctus australis",1
+"voucher of lampanyctus crocodilus",1
+"voucher of lampanyctus festivus",1
+"voucher of lampanyctus iselinoides",1
+"voucher of lampanyctus macdonaldi",1
+"voucher of lampanyctus mexicanus",1
+"voucher of lampanyctus nobilis",1
+"voucher of lampanyctus pusillus",1
 "voucher of lampetra appendix",1
+"voucher of lampichthys rectangularis",1
+"voucher of lamprologus brichardi",1
+"voucher of lamprologus callipterus",1
+"voucher of lamprologus compressiceps",1
 "voucher of lamprologus lemairii",1
+"voucher of lamprologus pleuromaculatus",1
+"voucher of lamprologus tigripictilis| voucher of neolamprologus werneri",1
 "voucher of landonia latidens",1
 "voucher of landonia latidens| voucher of phenacobrycon henni",1
 "voucher of lepidiolamprologus elongatus",1
+"voucher of lepidophanes guentheri",1
 "voucher of lepisosteus oculatus",1
 "voucher of lepomis auritus",1
 "voucher of lepomis gibbosus",1
@@ -3418,11 +3554,16 @@
 "voucher of leptocypris modestus",1
 "voucher of leptostomias gladiator",1
 "voucher of lestidiops affinis",1
-"voucher of lestradea stappersii",1
+"voucher of lestradea stappersii| voucher of lestradea stappersii",1
+"voucher of lethrinops auritus",1
 "voucher of lethrinops furcifer",1
+"voucher of lethrinops lethrinus",1
+"voucher of lethrinops parvidens",1
 "voucher of limnichthys nitidus",1
-"voucher of limnochromis auritus",1
-"voucher of limnotilapia dardennii",1
+"voucher of limnotilapia dardennei| voucher of limnotilapia dardennii",1
+"voucher of lipochromis obesus",1
+"voucher of lobianchia dofleini",1
+"voucher of lobianchia gemellarii",1
 "voucher of lobochilotes labiatus",1
 "voucher of lophius americanus",1
 "voucher of lota lota",1
@@ -3430,9 +3571,11 @@
 "voucher of lucania parva",1
 "voucher of lycodonus mirabilis",1
 "voucher of macrognathus pentophthalmos",1
+"voucher of macropleurodus bicolor",1
 "voucher of macrostomias longibarbatus",1
 "voucher of macrotrema caligans| figured of macrotrema caligans",1
 "voucher of malacocephalus laevis",1
+"voucher of maravichromis sphaerodon",1
 "voucher of mastacembelus albomaculatus",1
 "voucher of maurolicus muelleri",1
 "voucher of maylandia aurora",1
@@ -3448,24 +3591,49 @@
 "voucher of monocirrhus polyacanthus",1
 "voucher of morone americana",1
 "voucher of mugil curvidens",1
+"voucher of myctophum affine",1
+"voucher of myctophum asperum",1
+"voucher of myctophum fissunovi",1
+"voucher of myctophum lychnobium",1
+"voucher of myctophum nitidulum",1
+"voucher of myctophum obtusirostre",1
+"voucher of myctophum punctatum",1
+"voucher of myctophum selenops",1
 "voucher of mylochromis sphaerodon",1
 "voucher of naevochromis chrysogaster",1
+"voucher of nannobrachium atrum",1
+"voucher of nannobrachium cuprarium",1
+"voucher of nannobrachium indicum",1
+"voucher of nannobrachium isaacsi",1
+"voucher of nannobrachium lineatum",1
+"voucher of nannobrachium lineatum| genetic voucher of nannobrachium lineatum",1
+"voucher of nannobrachium nigrum",1
+"voucher of nannobrachium wisneri",1
 "voucher of nanochromis dimidiatus",1
 "voucher of nematolebias whitei",1
 "voucher of nemuroglanis lanceolatus| voucher of nemuroglanis lanceolatus| holotype of nemuroglanis lanceolatus| voucher of nemuroglanis lanceolatus",1
 "voucher of neobythites marginatus",1
 "voucher of neochromis greenwoodi",1
+"voucher of neochromis pseudonigricans",1
 "voucher of neocyema",1
 "voucher of neoditrema ransonneti",1
+"voucher of neolamprologus calliurus",1
 "voucher of neolamprologus fasciatus",1
+"voucher of neolamprologus furcifer",1
+"voucher of neolamprologus modestus",1
+"voucher of neolamprologus savoryi savoryi",1
+"voucher of neoscombrops atlanticus| voucher of verilus atlanticus",1
 "voucher of neostethus bicornis",1
 "voucher of nettastoma procera",1
 "voucher of nezumia suilla",1
 "voucher of nimbochromis polystigma",1
+"voucher of nimbochromis venustus",1
+"voucher of notoscopelus bolini",1
+"voucher of notoscopelus elongatus kroyeri",1
 "voucher of notoscopelus kroyeri",1
+"voucher of notoscopelus resplendens",1
 "voucher of notropis hudsonius",1
 "voucher of noturus gyrinus",1
-"voucher of nyassachromis leuciscus",1
 "voucher of ochmacanthus",1
 "voucher of odontostomias micropogon",1
 "voucher of oncorhynchus clarki pleuriticus",1
@@ -3475,13 +3643,13 @@
 "voucher of ophidioid",1
 "voucher of ophidion marginatum| erroneous citation of polyipnus clarus",1
 "voucher of ophisternon bengalensis",1
-"voucher of ophthalmotilapia nasuta",1
 "voucher of opisthoproctus soleatus",1
 "voucher of opsanus phobetron",1
 "voucher of orectolobus ornatus",1
-"voucher of oreochromis esculentus",1
 "voucher of osmerus mordax",1
-"voucher of otopharynx argyrosoma",1
+"voucher of otopharynx decorus",1
+"voucher of otopharynx nitidus",1
+"voucher of otopharynx speciosus",1
 "voucher of otothyris lophophanes",1
 "voucher of oxyurichthys microlepis",1
 "voucher of pachycara",1
@@ -3489,6 +3657,7 @@
 "voucher of pachystomias microdon",1
 "voucher of paracheirodon simulans",1
 "voucher of parahollardia lineata",1
+"voucher of paralabidochromis chilotes",1
 "voucher of paraliparis",1
 "voucher of paraliparis copei",1
 "voucher of parananochromis caudifasciatus",1
@@ -3504,7 +3673,7 @@
 "voucher of percina stictogaster",1
 "voucher of percopsis omiscomaycus| voucher of percopsis omiscomaycus",1
 "voucher of perissodus microlepis",1
-"voucher of petrochromis polyodon",1
+"voucher of petrochromis polyodon| voucher of petrochromis polyodon",1
 "voucher of phanerodon furcatus",1
 "voucher of phenacobrycon henni",1
 "voucher of photonectes gracilis",1
@@ -3514,7 +3683,6 @@
 "voucher of placidochromis subocularis",1
 "voucher of plagioscion magdalenae",1
 "voucher of platystoma parahybae",1
-"voucher of plecodus paradoxus",1
 "voucher of plectranthias garupellus",1
 "voucher of plectranthias longimanus",1
 "voucher of plectranthias nanus",1
@@ -3530,15 +3698,23 @@
 "voucher of prochilodus lineatus",1
 "voucher of prochilodus nigricans",1
 "voucher of prochilodus vimboides| voucher of prochilodus vimboides",1
+"voucher of prognathochromis",1
 "voucher of protomelas triaenodon",1
-"voucher of protomyctophum arcticum",1
+"voucher of protomyctophum arcticum| voucher of protomyctophum arcticum",1
+"voucher of protomyctophum subparallelum",1
+"voucher of psammochromis riponianus",1
 "voucher of pseudocrenilabrus multicolor",1
 "voucher of pseudodax",1
 "voucher of pseudonus acutus| holotype of pseudonus acutus",1
 "voucher of pseudoplatystoma coruscans",1
 "voucher of pseudoscaphirhynchus kauffmani",1
+"voucher of pseudotropheus elegans",1
 "voucher of pseudotropheus johannii",1
+"voucher of pseudotropheus livingstoni",1
+"voucher of pseudotropheus zebra",1
 "voucher of pterophyllum scalare",1
+"voucher of ptyochromis prodromus",1
+"voucher of ptyochromis sauvagei",1
 "voucher of pungitius pungitius",1
 "voucher of pygocentrus nattereri",1
 "voucher of pyxichromis orthostoma",1
@@ -3551,6 +3727,7 @@
 "voucher of rosenblattichthys hubbsi",1
 "voucher of salmo trutta",1
 "voucher of salvelinus fontinalis",1
+"voucher of sardinella",1
 "voucher of sargochromis codringtonii",1
 "voucher of sarotherodon occidentalis",1
 "voucher of satanoperca jurupari",1
@@ -3562,6 +3739,7 @@
 "voucher of scombrolabrax heterolepis",1
 "voucher of scopelarchoides danae",1
 "voucher of scopelarchus guentheri",1
+"voucher of scopelopsis multipunctatus",1
 "voucher of scopelosaurus argenteus",1
 "voucher of scyliorhinus retifer",1
 "voucher of sebastapistes tinkhami",1
@@ -3570,7 +3748,7 @@
 "voucher of serranochromis robustus",1
 "voucher of setipinna telara",1
 "voucher of silurichthys",1
-"voucher of simochromis diagramma",1
+"voucher of simochromis diagramma| voucher of simochromis diagramma",1
 "voucher of simpsonichthys constanciae",1
 "voucher of simpsonichthys flagellatus",1
 "voucher of simpsonichthys hellneri",1
@@ -3582,6 +3760,8 @@
 "voucher of sphyraena jello",1
 "voucher of sphyrna zygaena",1
 "voucher of steatocranus gibbiceps",1
+"voucher of stellifer ephelis",1
+"voucher of stenobrachius leucopsarus",1
 "voucher of sternarchogiton labiatus",1
 "voucher of stigmatochromis woodi",1
 "voucher of stomias affinis",1
@@ -3594,7 +3774,9 @@
 "voucher of sturisoma aureum",1
 "voucher of sturisoma frenatum",1
 "voucher of sudis atrox",1
-"voucher of symbolophorus barnardi",1
+"voucher of symbolophorus barnardi| voucher of symbolophorus barnardi",1
+"voucher of symbolophorus veranyi",1
+"voucher of symbolophorus veranyi| figured of symbolophorus veranyi",1
 "voucher of symphurus caribbeanus",1
 "voucher of symphurus caribbeanus| voucher of symphurus caribbeanus",1
 "voucher of symphurus diomedeanus",1
@@ -3611,23 +3793,38 @@
 "voucher of synodus poeyi",1
 "voucher of taeniochromis holotaenia",1
 "voucher of tangachromis dhanisi",1
+"voucher of tarletonbeania crenularis",1
 "voucher of teleogramma gracile",1
-"voucher of telmatochromis dhonti",1
 "voucher of thysochromis ansorgii",1
 "voucher of tilapia rendalli",1
+"voucher of tomicodon petersi",1
 "voucher of tramitichromis brevis",1
+"voucher of trematocara stigmaticum",1
 "voucher of trematocara unimaculatum",1
+"voucher of trematocara variabile",1
 "voucher of trematocranus placodon",1
 "voucher of trichiurus lepturus",1
 "voucher of trichogaster lalius",1
 "voucher of trichomycterus areolatus| voucher of trichomycterus areolatus",1
 "voucher of tridens melanops",1
-"voucher of triglachromis otostigma",1
+"voucher of triglachromis otostigma| voucher of triglachromis otostigma",1
 "voucher of trigonolampa miriceps",1
 "voucher of trinectes maculatus",1
+"voucher of triphoturus mexicanus",1
+"voucher of triphoturus nigrescens",1
 "voucher of tristramella simonis",1
-"voucher of tropheus moorii",1
+"voucher of tropheus moorii| voucher of tropheus moorii",1
+"voucher of tylochromis polylepis",1
 "voucher of tyrannochromis macrostoma",1
 "voucher of uncisudis advena",1
+"voucher of xenochromis hecqui",1
+"voucher of xenotilapia longispinis longispinis",1
+"voucher of xenotilapia melanogenys",1
+"voucher of xenotilapia ochrogenys ochrogenys",1
+"voucher of xenotilapia ornatipinnis",1
+"voucher of xenotilapia sima",1
+"voucher of yssichromis coop",1
+"voucher of yssichromis pyrrocephalus",1
+"voucher of yssichromis pyrrocephalus| voucher of bathybates fasciatus",1
 "voucher of zeus faber",1
 "voucher of zygaena subarcuata",1
