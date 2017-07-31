@@ -42,7 +42,7 @@ uMMz$dwc.basisOfRecord <- NA
 ## fix dwc.individualCount
 uMMz$dwc.individualCount <- NA
 
-needCols <- c("coreid","dwc.preparations","dwc.individualCount")
+needCols <- c("coreid","dwc.preparations","dwc.individualCount", "dwc.specificEpithet","dwc.scientificName")
 uMMz <- uMMz[,names(uMMz) %in% needCols]
 
 write.csv(uMMz,file = "data-raw/idb-download/centDL/UMMZ/privateIPT/occurrence_raw.csv",row.names = F)
