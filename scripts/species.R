@@ -59,3 +59,23 @@ dir.create("../data/summary",showWarnings = F)
 dir.create("../data/summary/data",showWarnings = F)
 dir.create("../data/summary/figures",showWarnings = F)
 write.csv(aggSpecsDF, file = "../data/summary/data/asih-by-species.csv",row.names = FALSE)
+
+##Plot our aggregated species counts
+aggSpecsDF <- aggSpecsDF[order(aggSpecsDF$freq,decreasing = T),]
+x <- list(title = "ASIH Code",
+          type = "category",
+          categoryorder = "array",
+          categoryarray = sort(aggSpecsDF$freq,decreasing = T))
+y <- list(title = "Unique Scientific Names")
+mark <- list(color = 'rgb(250,70,22)',
+             line = list(color = 'rgb(0,33,165)',
+                         width = 1.5))
+pl <- plot_ly(
+        x = aggSpecsDF$ASIHCode,
+        y = aggSpecsDF$freq,
+        name = "Unique Scientific Names by ASIH Code",
+        type = "bar",
+        marker = mark) %>%
+        layout(xaxis = x, yaxis = y)
+pl
+export(pl,file ="../data/summary/figures/asih-by-species-PLOTLY.png",vheight = 1080 )  
