@@ -1,12 +1,21 @@
-##Load Libraries
 library(plyr)
 library(tidyr)
 library(jsonlite)
 library(dplyr)
 library(plotly)
 
+######################################################################
+## This script is used to clean up the outputs of 'build-data-frame.R'
+## and do more work on dwc.preparations data
+##
+## Inputs: 'data-raw/workingDF.rdata'
+## Outputs: 'data-raw/prepsDF.rdata'
 
-##Build a dataframe from the downloaded fishy datasets
+
+## Build a dataframe from the raw occurence data downloaded previously
+## Since was are only interested in working with the preparations and individualcount
+## we will only look at that data now
+
 folderVector <- list.dirs("data-raw/idb-download/centDL",recursive = F)
 gigaDF <- data.frame()
 for (i in 1:length(folderVector)){
@@ -18,38 +27,49 @@ for (i in 1:length(folderVector)){
         gigaDF <- rbind.fill(gigaDF,tmpDF)
         }
 }
+## Write this raw preps dataframe to a file
 save(gigaDF,file = "data-raw/raw-prepsDF.rdata",compress = "bzip2")
-##load("data-raw/raw-prepsDF.rdata")
+
+## We can load the dataframe from a file
+## load("data-raw/raw-prepsDF.rdata")
+## or we can work from the object we have already created.
+
+## For now, we're gonna create a new object and obfuscate the variable names 
 mydf <- gigaDF
 names(mydf) <- c("V2","V1","V3")
 
-## Give value to NULL right now
+## We need to give a value to NULL
+## This includes strings of length zero and NA
 mydf[is.na(mydf$V1),]$V1 <- "No value provided"
 mydf[nchar(mydf$V1)==0,]$V1 <- "No value provided"
 
 
-
-##split out on semicolon
+## We know that sometimes these data are concatenated with a semicolon, so
+## we can split out on semicolon
 mydf <- mydf %>% mutate(V1 = strsplit(as.character(V1), ";|\\|")) %>% unnest(V1)
-## let's only work on unique values
+## Let's only work on unique values
 mydf <- mydf[!duplicated(mydf),]
-## clean up leading/training whitespace
+## Clean up leading/trailing whitespace
 mydf$V1 <- trimws(mydf$V1,"both")
 
-######################################################################## Lump all ethanol together
+## Our data cleaning process is multi-step. First we regular expressions to lump similar values togther,
+## then we remove outliers and null values. We will do this process for each of
+## our identified preparation types and generate a dictionary of values 
+
+######################################################################## Lump ethanol
 alch <- mydf[grepl("alc|eth|etoh|iso|fluid|vial|\\(formalin-fixed\\)|tank", tolower(mydf$V1)),]
 
-## remove outliers for tissue
+## Remove outliers for tissue
 alch <- alch[!grepl("tiss", tolower(alch$V1)),]
 ## remove Zero count items
 alch <- alch[!alch$V1=="0 alc",]
 
-#############################################################################lump formalin
+######################################################################## Lump formalin
 form <- mydf[grepl("form", tolower(mydf$V1)),]
 ## remove outliers for alch
 form <- form[!grepl("->70|mold|non-forma|eth|\\(formalin-fixed\\)", tolower(form$V1)),]
 
-############################################################################ Lump for c&s
+######################################################################## Lump c&s
 cands <- mydf[grepl("c&s",tolower(mydf$V1))|grepl("clear",tolower(mydf$V1))|grepl("stain",tolower(mydf$V1))|grepl("glyc",tolower(mydf$V1))|grepl("c & s",tolower(mydf$V1)),]
 # remove outliers: stainless steel
 cands <- cands[!grepl("steel", tolower(cands$V1)),]
@@ -58,7 +78,7 @@ cands <- cands[!cands$V1=="C&S - 0",]
 cands <- cands[!cands$V1=="0 c&s",]
 
 
-######################################################################## Lump for skeleton
+######################################################################## Lump skeletal
 skel <- mydf[grepl("skel|oste|oto|bone|skul|vert|mount|dried|mold|[0-9] sk",tolower(mydf$V1)),]
 ##remove outliers: c&s
 skel <- skel[!grepl("c&s|photo|^[0] sk", tolower(skel$V1)),]
@@ -66,19 +86,19 @@ skel <- skel[!grepl("c&s|photo|^[0] sk", tolower(skel$V1)),]
 skel <- skel[!skel$V1=="0 sk",]
 
 
-###########################################################################lump for tissue
+######################################################################## Lump tissue
 tissue <- mydf[grepl("etoh \\| tissue\\:|tissue|95\\% etoh \\(tiss\\)|frozen \\(tis",tolower(mydf$V1))|mydf$V1=="tiss",]
 
 
-###########################################################################lump for media
+######################################################################## Lump media
 ## todo: find "radiograph" matches (exp. USNM)
 media <- mydf[grepl("x\\-ray|photo|xray|slide|radio",mydf$V1),]
 
-##########################################################################lump for NULL
+######################################################################## Lump for NULL
 notpro <- mydf[mydf$V1=="No value provided",]
 
 
-## Standardize the names
+## We can now standardize the names
 alch$V1 <- "alchohol"
 cands$V1 <- "clearAndStain"
 skel$V1 <- "skeleton"
@@ -87,29 +107,26 @@ media$V1 <- "media"
 form$V1 <- "formalin"
 notpro$V1 <- "notProvided"
 
-## Build a dataframe from the standardized names
+## And build a dataframe from the standardized names
 preps <- rbind.fill(alch,form,cands,tissue,media,skel,notpro)
-## Don't need counts anymore
+## Don't need counts in this dataframe
 preps$V3 <- NULL
-## Fix up variable names
+## Give each variable a proper name
 names(preps) <- c("idigbio.uuid","standardPrep")
+## Write this dataframe to a file
 save(preps,file = "data-raw/prepsDF.rdata",compress = "bzip2")
 
 
 
 
 
-
-
-
-
-## Match everything back
+## Match our standardized preps back to our working dataframe
 load("data-raw/prepsDF.rdata")
 load("data-raw/workingDF.rdata")
 workingDF <- merge(workingDF,preps,all.x = T)
 workingDF[is.na(workingDF$standardPrep),]$standardPrep <- "other"
 
-
+## We can now generate a preps dataframe for each ASIH collection and plot the results 
 prepASIH <- unique(workingDF$ASIHCode)
 for(i in 1:length(prepASIH)){
         ##Todo: write raw preps csv
@@ -129,9 +146,9 @@ for(i in 1:length(prepASIH)){
         
 }
 
+## We can also generate an aggregate count of preps per ASIH code and plot that too
 aggPrepsDF <- plyr::count(workingDF,c("ASIHCode","standardPrep"))
 aggPrepsDF <- spread(aggPrepsDF, standardPrep, freq)
-
 
 f <- plot_ly(aggPrepsDF, x = ~ASIHCode, y = ~alchohol, type = 'bar', name = 'Alchohol') %>%
         add_trace(y = ~clearAndStain, name = 'Cleared and Stained') %>%
@@ -143,5 +160,4 @@ f <- plot_ly(aggPrepsDF, x = ~ASIHCode, y = ~alchohol, type = 'bar', name = 'Alc
         add_trace(y = ~other, name = 'Other or non-standard prep') %>%
         layout(yaxis = list(title = 'Count'), barmode = 'stack')
 f
-
 write.csv(aggPrepsDF,file = "../data/summary/data/preps-distribution.csv",row.names = F)
