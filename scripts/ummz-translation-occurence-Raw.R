@@ -33,23 +33,15 @@ uMMz <- uMMz[!uMMz$dwc.catalogNumber %in% uMMz2$dwc.catalogNumber,]
 # We need to standardize our new data to match the iDigBio index,
 # the following steps perform these transformations
 
-## Make a geopoint
-uMMz$idigbio.geoPoint <- NA
-for(i in 1:length(uMMz$dwc.occurrenceID)){
-        if(is.na(uMMz$dwc.decimalLatitude[i])){next}else{
-        uMMz$idigbio.geoPoint[i] <- jsonlite::toJSON(list(lat=uMMz$dwc.decimalLatitude[i],lon=uMMz$decimalLongitude[i]),auto_unbox = T)
-        }
-}
-
 ## Standardize coreid
 substrRight <- function(x, n){
         substr(x, nchar(x)-n+1, nchar(x))
 }
 uMMz$coreid <- substrRight(uMMz$dwc.occurrenceID,36)
-## Add an idigbio.uuid
+## idigbio.uuid
 uMMz$idigbio.uuid <- substrRight(uMMz$dwc.occurrenceID,36)
 
-## Apply a recordset UUID
+## Apply recordset UUID
 rsUUID <- "168d73e6-8e1a-4b69-9d8b-96ff2de773ee"
 uMMz$idigbio.recordset <- rsUUID
 
@@ -71,12 +63,9 @@ uMMz$dwc.basisOfRecord <- NA
 ## dwc.individualCount
 uMMz$dwc.individualCount <- NA
 
-## Transform to lowercase dwc.family
-uMMz$dwc.family <- tolower(uMMz$dwc.family)
-
 ## Our privateIPT has some variables we don't need,
 ## we can safely drop them now and write our results to
 ## a file.
-dropCol <- c("dwc.identifiedBy","dwc.samplingProtocol","dwc.decimalLatitude","dwc.occurrenceRemarks","decimalLongitude","dwc.preparations","dwc.localityRemarks","dwc.measurementValuesize","dwc.eventTime")
-uMMz <- uMMz[,!names(uMMz) %in% dropCol]
-write.csv(uMMz,file = "data-raw/idb-download/centDL/UMMZ/privateIPT/occurrence.csv",row.names = F)
+needCols <- c("coreid","dwc.preparations","dwc.individualCount", "dwc.specificEpithet","dwc.scientificName")
+uMMz <- uMMz[,names(uMMz) %in% needCols]
+write.csv(uMMz,file = "data-raw/idb-download/centDL/UMMZ/privateIPT/occurrence_raw.csv",row.names = F)
