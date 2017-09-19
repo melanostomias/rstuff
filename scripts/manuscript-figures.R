@@ -22,9 +22,10 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(df$freq,decreasing = T))
-y <- list(title = "Number of Records",
+y <- list(title = "Number of Records (thousands)",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent = "none")
 p <- plot_ly(x=df$ASIHCode,y=df$freq,
              marker = list(color = rep(c("black","grey"), times=length(df$ASIHCode), each=1)))%>%
         layout(xaxis = x, yaxis = y,margin=m)
@@ -44,7 +45,8 @@ x <- list(title = "ASIH Code",
           categoryarray = sort(sAC$bluegill.individualCount,decreasing = T))
 y <- list(title = "Number of Specimens (millions)",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent = "none")
 
 pl <- plot_ly(
         x = sAC$ASIHCode,
@@ -71,7 +73,7 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(agrDF$FamilyCount,decreasing = T))
-y <- list(title = "Unique Family Names",
+y <- list(title = "Number of Unique Family Names",
           tickfont = f,
           titlefont = f)
 
@@ -95,7 +97,7 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(tpDF$Holotype,decreasing = T))
-y <- list(title = "# typeStatus Records",
+y <- list(title = "Number of Type Records",
           tickfont = f,
           titlefont = f)
 
@@ -134,7 +136,7 @@ x <- list(title = "ASIH Code",
           tickfont = f,
           titlefont = f,
           categoryarray = sort(gpDF$gpPCT,decreasing = T))
-y <- list(title = "% Complete",
+y <- list(title = "Percent of Records with a Geopoint",
           tickfont = f,
           titlefont = f)
 pl <- plot_ly(
@@ -167,13 +169,14 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryarray = sort(recComb$freq,decreasing = T)
           )
-y <- list(title = "Number of Records",
+y <- list(title = "Number of Records (millions)",
           autotick = FALSE,
           ticks = "outside",
           tick0 = 0,
           dtick = 25000,
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent="none")
 pl <- plot_ly(
         x = recComb$ASIHCode,
         y = recComb$freq,
@@ -208,7 +211,8 @@ x <- list(title = "ASIH Code",
           categoryarray = sort(sACcomb$bluegill.individualCount,decreasing = T))
 y <- list(title = "Number of Specimens (millions)",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent="none")
 
 pl <- plot_ly(
         x = sACcomb$ASIHCode,
@@ -240,14 +244,14 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(aggSpecsDF$freq,decreasing = T))
-y <- list(title = "Unique Scientific Names",
+y <- list(title = "Number of Unique Scientific Names",
           tickfont = f,
           titlefont = f)
 
 pl <- plot_ly(
         x = aggSpecsDF$ASIHCode,
         y = aggSpecsDF$freq,
-        name = "Unique Scientific Names by ASIH Code",
+        name = "Unique Scientific Names",
         type = "bar",
         marker=list(color="black")) %>%
         add_trace(y= aggSpecsDF$freq95,name="Poss and Collette 1995",marker=list(color="grey"))%>%
@@ -278,7 +282,7 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(tpDF$Holotype,decreasing = T))
-y <- list(title = "# Primary Type Records",
+y <- list(title = "Number of Type Records",
           tickfont = f,
           titlefont = f)
 pl <- plot_ly(
@@ -305,7 +309,7 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(tpDF$Paratype,decreasing = T))
-y <- list(title = "# Secondary Type Records",
+y <- list(title = "Number of Type Records",
           tickfont = f,
           titlefont = f)
 pl <- plot_ly(
