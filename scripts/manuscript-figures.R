@@ -335,6 +335,7 @@ cs <- cs[complete.cases(cs),]
 cs <- cs[order(cs$clearAndStain,decreasing = T),]
 x <- list(title = "ASIH Code",
           type = "category",
+          tickangle = -90,
           tickfont = f,
           titlefont = f,
           categoryorder = "array",
@@ -385,6 +386,7 @@ tiss <- tiss[order(tiss$tissue,decreasing = T),]
 x <- list(title = "ASIH Code",
           tickfont = f,
           titlefont = f,
+          tickangle = -90,
           type = "category",
           categoryorder = "array",
           categoryarray = sort(tiss$tissue,decreasing = T))
