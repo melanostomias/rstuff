@@ -5,6 +5,9 @@ f <- list(
         size = 18,
         color = "black"
 )
+
+##Legend
+l <- list(font=f)
 ## Margin
 m <- list(b=100,l=80)
 
@@ -109,7 +112,7 @@ pl <- plot_ly(
         type = "bar",
         marker=list(color = "grey")) %>%
         add_trace(y = ~Paratype, name="Secondary Type",marker=list(color = "black")) %>%
-        layout(xaxis = x, yaxis = y,barmode="stack",margin=m) %>%
+        layout(xaxis = x, yaxis = y,barmode="stack",margin=m,legend=l) %>%
         add_annotations(x = tpDF[tpDF$Holotype<50,]$ASIHCode,
                         y = tpDF[tpDF$Holotype<50,]$Holotype,
                         text = tpDF[tpDF$Holotype<50,]$Holotype,
@@ -184,7 +187,7 @@ pl <- plot_ly(
         type = "bar",
         marker=list(color="black")) %>%
         add_trace(y=recComb$freq95,name="Poss and Collette 1995",marker=list(color="grey")) %>%
-        layout(xaxis = x, yaxis = y, barmode="group",margin=m)
+        layout(xaxis = x, yaxis = y, barmode="group",margin=m, legend=l)
 pl
 export(pl,file ="fig8.png",vheight = 1080 )
 
@@ -221,7 +224,7 @@ pl <- plot_ly(
         type = "bar",
         marker=list(color="black")) %>%
         add_trace(y=sACcomb$freq95,name="Poss and Collette 1995",marker=list(color="grey"))%>%
-        layout(xaxis = x, yaxis = y,barmode="group",margin=m)
+        layout(xaxis = x, yaxis = y,barmode="group",margin=m, legend=l)
 pl
 export(pl,file ="fig9.png",vheight = 1080 )
 
@@ -255,7 +258,7 @@ pl <- plot_ly(
         type = "bar",
         marker=list(color="black")) %>%
         add_trace(y= aggSpecsDF$freq95,name="Poss and Collette 1995",marker=list(color="grey"))%>%
-        layout(xaxis = x, yaxis = y,barmode="group",margin=m)
+        layout(xaxis = x, yaxis = y,barmode="group",margin=m, legend=l)
 pl
 export(pl,file ="fig10.png",vheight = 1080 )  
 
@@ -282,7 +285,7 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(tpDF$Holotype,decreasing = T))
-y <- list(title = "Number of Type Records",
+y <- list(title = "Number of Primary Type Records",
           tickfont = f,
           titlefont = f)
 pl <- plot_ly(
@@ -293,7 +296,7 @@ pl <- plot_ly(
         type = "bar",
         marker=list(color="black")) %>%
         add_trace(y = ~Holotype95, name="Poss and Collette 1995",marker=list(color="grey")) %>%
-        layout(xaxis = x, yaxis = y,barmode="group",margin=m)
+        layout(xaxis = x, yaxis = y,barmode="group",margin=m, legend=l)
 pl
 export(pl,file ="fig11.png",vheight = 1080 )
 
@@ -309,7 +312,7 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(tpDF$Paratype,decreasing = T))
-y <- list(title = "Number of Type Records",
+y <- list(title = "Number of Secondary Type Records",
           tickfont = f,
           titlefont = f)
 pl <- plot_ly(
@@ -320,7 +323,7 @@ pl <- plot_ly(
         type = "bar",
         marker=list(color="black")) %>%
         add_trace(y = ~Paratype95, name="Poss and Collette 1995",marker=list(color="grey")) %>%
-        layout(xaxis = x, yaxis = y,barmode="group",margin=m)
+        layout(xaxis = x, yaxis = y,barmode="group",margin=m, legend=l)
 pl
 export(pl,file ="fig12.png",vheight = 1080 )
 
