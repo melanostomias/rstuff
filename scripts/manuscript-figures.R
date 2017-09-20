@@ -78,7 +78,8 @@ x <- list(title = "ASIH Code",
           categoryarray = sort(agrDF$FamilyCount,decreasing = T))
 y <- list(title = "Number of Unique Family Names",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent = "none")
 
 pl <- plot_ly(
         x = agrDF$ASIHCode,
@@ -100,9 +101,10 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(tpDF$Holotype,decreasing = T))
-y <- list(title = "Number of Type Records",
+y <- list(title = "Number of Type Records (thousands)",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent = "none")
 
 pl <- plot_ly(
         data = tpDF,
@@ -141,7 +143,8 @@ x <- list(title = "ASIH Code",
           categoryarray = sort(gpDF$gpPCT,decreasing = T))
 y <- list(title = "Percent of Records with a Geopoint",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent = "none")
 pl <- plot_ly(
         data = gpDF,
         x = ~ASIHCode,
@@ -247,9 +250,10 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(aggSpecsDF$freq,decreasing = T))
-y <- list(title = "Number of Unique Scientific Names",
+y <- list(title = "Number of Unique Scientific Names (thousands)",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent = "none")
 
 pl <- plot_ly(
         x = aggSpecsDF$ASIHCode,
@@ -285,9 +289,10 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(tpDF$Holotype,decreasing = T))
-y <- list(title = "Number of Primary Type Records",
+y <- list(title = "Number of Primary Type Records (thousdands)",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent = "none")
 pl <- plot_ly(
         data = tpDF,
         x = ~ASIHCode,
@@ -312,9 +317,10 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(tpDF$Paratype,decreasing = T))
-y <- list(title = "Number of Secondary Type Records",
+y <- list(title = "Number of Secondary Type Records (thousands)",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent = "none")
 pl <- plot_ly(
         data = tpDF,
         x = ~ASIHCode,
@@ -426,7 +432,8 @@ x <- list(title = "ASIH Code",
           categoryarray = sort(media$media,decreasing = T))
 y <- list(title = "Media",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent = "none")
 p4 <- plot_ly(
         data = media,
         x = ~ASIHCode,
@@ -449,9 +456,10 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(mDF$Count,decreasing = T))
-y <- list(title = "Media Records",
+y <- list(title = "Media Records (thousands)",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent = "none")
 p5 <- plot_ly(
         data = mDF,
         x = ~ASIHCode,
