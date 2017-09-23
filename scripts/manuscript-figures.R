@@ -7,7 +7,7 @@ f <- list(
 )
 
 ##Legend
-l <- list(font=f)
+l <- list(font=f,x = .7, y = .9)
 ## Margin
 m <- list(b=100,l=80)
 
