@@ -353,7 +353,7 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(cs$clearAndStain,decreasing = T))
-y <- list(title = "Cleared and Stained",
+y <- list(title = "Number of Specimen Records with Cleared and Stained Preparations",
           tickfont = f,
           titlefont = f)
 p1 <- plot_ly(
@@ -378,7 +378,7 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(skel$skeleton,decreasing = T))
-y <- list(title = "Skeletal",
+y <- list(title = "Number of Specimen Records with Skeletal Specimen Preparations",
           tickfont = f,
           titlefont = f)
 p2 <- plot_ly(
@@ -403,7 +403,7 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(tiss$tissue,decreasing = T))
-y <- list(title = "Tissues",
+y <- list(title = "Number of Specimen Records with Associated Tissues",
           tickfont = f,
           titlefont = f)
 p3 <- plot_ly(
@@ -430,7 +430,7 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(media$media,decreasing = T))
-y <- list(title = "Media",
+y <- list(title = "Number of Specimen Records with Media",
           tickfont = f,
           titlefont = f,
           showexponent = "none")
@@ -456,7 +456,7 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(mDF$Count,decreasing = T))
-y <- list(title = "Media Records (thousands)",
+y <- list(title = "Number of Media Records (thousands)",
           tickfont = f,
           titlefont = f,
           showexponent = "none")
@@ -469,4 +469,3 @@ p5 <- plot_ly(
         layout(xaxis = x,yaxis=y)
 p5
 export(p5,file ="fig17.png",vheight = 1080 )
-
