@@ -353,7 +353,7 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(cs$clearAndStain,decreasing = T))
-y <- list(title = "Number of Specimen Records with Cleared and Stained Preparations",
+y <- list(title = "Number of Specimen Records with Cleared and Stained Specimen Preparations",
           tickfont = f,
           titlefont = f)
 p1 <- plot_ly(
