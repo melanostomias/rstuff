@@ -186,7 +186,7 @@ y <- list(title = "Number of Records (millions)",
 pl <- plot_ly(
         x = recComb$ASIHCode,
         y = recComb$freq,
-        name = "Present study",
+        name = "Present Study",
         type = "bar",
         marker=list(color="black")) %>%
         add_trace(y=recComb$freq95,name="Poss and Collette 1995",marker=list(color="grey")) %>%
@@ -223,7 +223,7 @@ y <- list(title = "Number of Specimens (millions)",
 pl <- plot_ly(
         x = sACcomb$ASIHCode,
         y = sACcomb$bluegill.individualCount,
-        name = "Present study",
+        name = "Present Study",
         type = "bar",
         marker=list(color="black")) %>%
         add_trace(y=sACcomb$freq95,name="Poss and Collette 1995",marker=list(color="grey"))%>%
@@ -250,7 +250,7 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(aggSpecsDF$freq,decreasing = T))
-y <- list(title = "Number of Unique Scientific Names (thousands)",
+y <- list(title = "Number of Unique Values in 'dwc.scientificName' (thousands)",
           tickfont = f,
           titlefont = f,
           showexponent = "none")
@@ -258,7 +258,7 @@ y <- list(title = "Number of Unique Scientific Names (thousands)",
 pl <- plot_ly(
         x = aggSpecsDF$ASIHCode,
         y = aggSpecsDF$freq,
-        name = "Present study",
+        name = "Present Study",
         type = "bar",
         marker=list(color="black")) %>%
         add_trace(y= aggSpecsDF$freq95,name="Poss and Collette 1995",marker=list(color="grey"))%>%
@@ -297,7 +297,7 @@ pl <- plot_ly(
         data = tpDF,
         x = ~ASIHCode,
         y = ~Holotype,
-        name = "Present study",
+        name = "Present Study",
         type = "bar",
         marker=list(color="black")) %>%
         add_trace(y = ~Holotype95, name="Poss and Collette 1995",marker=list(color="grey")) %>%
@@ -325,7 +325,7 @@ pl <- plot_ly(
         data = tpDF,
         x = ~ASIHCode,
         y = ~Paratype,
-        name = "Present study",
+        name = "Present Study",
         type = "bar",
         marker=list(color="black")) %>%
         add_trace(y = ~Paratype95, name="Poss and Collette 1995",marker=list(color="grey")) %>%
@@ -403,7 +403,7 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(tiss$tissue,decreasing = T))
-y <- list(title = "Number of Specimen Records with Associated Tissues",
+y <- list(title = "Number of Specimen Records with Tissues",
           tickfont = f,
           titlefont = f)
 p3 <- plot_ly(
