@@ -21,6 +21,11 @@ dir.create("../data/summary",showWarnings = FALSE)
 dir.create("../data/summary/figures",showWarnings = FALSE)
 dir.create("../data/summary/data",showWarnings = FALSE)
 
+##Remove KUIT
+## "0f53b3e3-c248-4026-a070-15c3fefdbbc0"
+filteredDF <- hugeDF %>% filter(!recordset=="0f53b3e3-c248-4026-a070-15c3fefdbbc0")
+hugeDF <- filteredDF
+
 ##Summary Figures- total record count
 pdf("../data/summary/figures/asih-by-records.pdf")
 srAC <- plyr::count(hugeDF,"ASIHCode")

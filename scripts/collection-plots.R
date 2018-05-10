@@ -17,6 +17,9 @@ load("data-raw/hugeDF.rdata")
 gop <- hugeDF
 
 bbRS <- plyr::count(gop,c("ASIHCode","collectioncode","institutioncode","recordset"))
+##Don't profile KUIT
+bbRS <- bbRS[!bbRS$collectioncode=="kuit",]
+
 profile_collections <- function(bbRS, type="all"){
         type <- type
 pb <- progress_bar$new(total = length(bbRS$institutioncode))

@@ -12,7 +12,7 @@ library(plotly)
 ## Outputs: 'asih-by-specimens1.csv'
 
 ## Load the dataframe that we created with preps.R
-load("data-raw/raw-prepsDF.rdata")
+load("~/Documents/temp/09MAY2017/rstuff/scripts/data-raw/raw-prepsDF.rdata")
 
 ## For now, we're gonna create a new object and obfuscate the variable names 
 mydf <- gigaDF
@@ -56,6 +56,9 @@ names(countAgg) <- c("idigbio.uuid","bluegill.individualCount")
 
 ## Match our standardized counts back to our working dataframe
 load("data-raw/workingDF.rdata")
+##Gotta remove KUIT
+## "0f53b3e3-c248-4026-a070-15c3fefdbbc0"
+workingDF <- workingDF[!workingDF$recordset=="0f53b3e3-c248-4026-a070-15c3fefdbbc0",]
 
 ## Merge our standardized individual counts
 workingDF <- merge(workingDF,countAgg,all.x = T)

@@ -10,7 +10,7 @@
 "FSUCML","RecordCount",1015
 "INHS","RecordCount",110741
 "JFBM","RecordCount",39904
-"KU","RecordCount",51696
+"KU","RecordCount",41314
 "LACM","RecordCount",175414
 "LSUMZ","RecordCount",17672
 "MCZ","RecordCount",173495
@@ -48,7 +48,7 @@
 "FSUCML","SpecimenCount",2461
 "INHS","SpecimenCount",888610
 "JFBM","SpecimenCount",335200
-"KU","SpecimenCount",1524019
+"KU","SpecimenCount",526619
 "LACM","SpecimenCount",2790511
 "LSUMZ","SpecimenCount",329902
 "MCZ","SpecimenCount",173495
@@ -86,7 +86,7 @@
 "FSUCML","NA",2461
 "INHS","NA",888610
 "JFBM","NA",335200
-"KU","NA",1524019
+"KU","NA",526619
 "LACM","NA",2790511
 "LSUMZ","NA",329902
 "MCZ","NA",173495

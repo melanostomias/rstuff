@@ -43,6 +43,9 @@ names(species) <- c("idigbio.uuid","dwc.specificEpithet","dwc.scientificName")
 ## We can now match our species data back to our working dataframe
 ## load("data-raw/raw-speciesDF.rdata")
 load("data-raw/workingDF.rdata")
+##Filter off KUIT
+## "0f53b3e3-c248-4026-a070-15c3fefdbbc0"
+workingDF <- workingDF[!workingDF$recordset=="0f53b3e3-c248-4026-a070-15c3fefdbbc0",]
 workingDF <- merge(workingDF,species,all.x = T)
 
 ## We can write the data we find about each collection to a 
