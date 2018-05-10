@@ -33,7 +33,7 @@ p <- plot_ly(x=df$ASIHCode,y=df$freq,
              marker = list(color = rep(c("black","grey"), times=length(df$ASIHCode), each=1)))%>%
         layout(xaxis = x, yaxis = y,margin=m)
 p
-export(p,file ="fig3.png",vheight = 1080 )
+export(p,file ="../data/summary/figures/fig3.png",vheight = 1080 )
 
 
 ##Fig4
@@ -59,7 +59,7 @@ pl <- plot_ly(
         marker = list(color = rep(c("black","grey"), times=length(sAC$ASIHCode), each=1)))%>%
         layout(xaxis = x, yaxis = y,margin=m)
 pl
-export(pl,file ="fig4.png",vheight = 1080 )
+export(pl,file ="../data/summary/figures/fig4.png",vheight = 1080 )
 
 
 
@@ -89,7 +89,7 @@ pl <- plot_ly(
         marker = list(color = rep(c("black","grey"), times=length(agrDF$ASIHCode), each=1))) %>%
         layout(xaxis = x, yaxis = y,margin=m)
 pl
-export(pl,file ="fig5.png",vheight = 1080 )  
+export(pl,file ="../data/summary/figures/fig5.png",vheight = 1080 )  
 
 
 ##Fig6
@@ -127,7 +127,7 @@ pl <- plot_ly(
                         #ay = -40
                         )
 pl
-export(pl,file ="fig6.png",vheight = 1080 )
+export(pl,file ="../data/summary/figures/fig6.png",vheight = 1080 )
 
 
 ##fig7
@@ -154,7 +154,7 @@ pl <- plot_ly(
         marker = list(color = rep(c("black","grey"), times=length(gpDF$ASIHCode), each=1))) %>%
         layout(xaxis = x, yaxis = y,margin=m)
 pl
-export(pl,file ="fig7.png",vheight = 1080 )
+export(pl,file ="../data/summary/figures/fig7.png",vheight = 1080 )
 
 
 
@@ -192,7 +192,7 @@ pl <- plot_ly(
         add_trace(y=recComb$freq95,name="Poss and Collette 1995",marker=list(color="grey")) %>%
         layout(xaxis = x, yaxis = y, barmode="group",margin=m, legend=l)
 pl
-export(pl,file ="fig8.png",vheight = 1080 )
+export(pl,file ="../data/summary/figures/fig8.png",vheight = 1080 )
 
 
 
@@ -229,7 +229,7 @@ pl <- plot_ly(
         add_trace(y=sACcomb$freq95,name="Poss and Collette 1995",marker=list(color="grey"))%>%
         layout(xaxis = x, yaxis = y,barmode="group",margin=m, legend=l)
 pl
-export(pl,file ="fig9.png",vheight = 1080 )
+export(pl,file ="../data/summary/figures/fig9.png",vheight = 1080 )
 
 
 
@@ -264,7 +264,7 @@ pl <- plot_ly(
         add_trace(y= aggSpecsDF$freq95,name="Poss and Collette 1995",marker=list(color="grey"))%>%
         layout(xaxis = x, yaxis = y,barmode="group",margin=m, legend=l)
 pl
-export(pl,file ="fig10.png",vheight = 1080 )  
+export(pl,file ="../data/summary/figures/fig10.png",vheight = 1080 )  
 
 
 
@@ -303,7 +303,7 @@ pl <- plot_ly(
         add_trace(y = ~Holotype95, name="Poss and Collette 1995",marker=list(color="grey")) %>%
         layout(xaxis = x, yaxis = y,barmode="group",margin=m, legend=l)
 pl
-export(pl,file ="fig11.png",vheight = 1080 )
+export(pl,file ="../data/summary/figures/fig11.png",vheight = 1080 )
 
 
 
@@ -331,7 +331,7 @@ pl <- plot_ly(
         add_trace(y = ~Paratype95, name="Poss and Collette 1995",marker=list(color="grey")) %>%
         layout(xaxis = x, yaxis = y,barmode="group",margin=m, legend=l)
 pl
-export(pl,file ="fig12.png",vheight = 1080 )
+export(pl,file ="../data/summary/figures/fig12.png",vheight = 1080 )
 
 
 
@@ -363,7 +363,7 @@ p1 <- plot_ly(
         type = "bar",
         marker = list(color = rep(c("black","grey"), times=length(cs$ASIHCode), each=1)))%>%
         layout(xaxis = x,yaxis=y,margin=m)
-export(p1,file ="fig13.png",vheight = 1080 )
+export(p1,file ="../data/summary/figures/fig13.png",vheight = 1080 )
 
 
 
@@ -389,7 +389,7 @@ p2 <- plot_ly(
         marker = list(color = rep(c("black","grey"), times=length(skel$ASIHCode), each=1)))%>%
         layout(xaxis = x,yaxis=y,margin=m)
 
-export(p2,file ="fig14.png",vheight = 1080 )
+export(p2,file ="../data/summary/figures/fig14.png",vheight = 1080 )
 
 ##fig15
 ##tissue
@@ -414,7 +414,7 @@ p3 <- plot_ly(
         marker = list(color = rep(c("black","grey"), times=length(tiss$ASIHCode), each=1)))%>%
         layout(xaxis = x,yaxis=y,margin=m)
 
-export(p3,file ="fig15.png",vheight = 1080 )
+export(p3,file ="../data/summary/figures/fig15.png",vheight = 1080 )
 
 
 
@@ -442,7 +442,7 @@ p4 <- plot_ly(
         marker = list(color = rep(c("black","grey"), times=length(media$ASIHCode), each=1)))%>%
         layout(xaxis = x,yaxis=y,margin=m)
 
-export(p4,file ="fig16.png",vheight = 1080 )
+export(p4,file ="../data/summary/figures/fig16.png",vheight = 1080 )
 
 
 
@@ -468,4 +468,4 @@ p5 <- plot_ly(
         marker = list(color = rep(c("black","grey"), times=length(mDF$ASIHCode), each=1)))%>%
         layout(xaxis = x,yaxis=y)
 p5
-export(p5,file ="fig17.png",vheight = 1080 )
+export(p5,file ="../data/summary/figures/fig17.png",vheight = 1080 )
