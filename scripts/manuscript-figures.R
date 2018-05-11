@@ -20,6 +20,7 @@ df <- df[order(df$freq,decreasing = T),]
 
 
 x <- list(title = "ASIH Code",
+          tickangle = -90,
           tickfont = f,
           titlefont = f,
           type = "category",
@@ -41,6 +42,7 @@ export(p,file ="../data/summary/figures/fig3.png",vheight = 1080 )
 sAC <- read.csv("https://raw.githubusercontent.com/melanostomias/rstuff/master/data/summary/data/asih-by-specimens1.csv")
 sAC <- sAC[order(sAC$bluegill.individualCount,decreasing = T),]
 x <- list(title = "ASIH Code",
+          tickangle = -90,
           type = "category",
           tickfont = f,
           titlefont = f,
@@ -71,6 +73,7 @@ export(pl,file ="../data/summary/figures/fig4.png",vheight = 1080 )
 ## Unique families
 agrDF <- read.csv("https://raw.githubusercontent.com/melanostomias/rstuff/master/data/summary/data/asih-by-families-PLOTLY.csv",stringsAsFactors = F)
 x <- list(title = "ASIH Code",
+          tickangle = -90,
           tickfont = f,
           titlefont = f,
           type = "category",
@@ -96,6 +99,7 @@ export(pl,file ="../data/summary/figures/fig5.png",vheight = 1080 )
 ## type records
 tpDF <- read.csv("https://raw.githubusercontent.com/melanostomias/rstuff/master/data/summary/data/asih-types-summary.csv",stringsAsFactors = F)
 x <- list(title = "ASIH Code",
+          tickangle = -90,
           tickfont = f,
           titlefont = f,
           type = "category",
@@ -136,6 +140,7 @@ export(pl,file ="../data/summary/figures/fig6.png",vheight = 1080 )
 
 gpDF <- read.csv(file ="https://raw.githubusercontent.com/melanostomias/rstuff/master/data/summary/data/asih-geopoint-summary.csv",stringsAsFactors = F)
 x <- list(title = "ASIH Code",
+          tickangle = -90,
           type = "category",
           categoryorder = "array",
           tickfont = f,
@@ -169,6 +174,7 @@ recComb <- base::merge(recs,recs95,all.x=T)
 recComb <- recComb[order(recComb$freq,decreasing = T),]
 recComb <- recComb[!is.na(recComb$freq95),]
 x <- list(title = "ASIH Code",
+          tickangle = -90,
           type = "category",
           categoryorder = "array",
           tickfont = f,
@@ -210,6 +216,7 @@ sACcomb <- base::merge(sAC,sAC95,all.x=T)
 sACcomb <- sACcomb[order(sACcomb$bluegill.individualCount,decreasing = T),]
 sACcomb <- sACcomb[!is.na(sACcomb$freq95),]
 x <- list(title = "ASIH Code",
+          tickangle = -90,
           type = "category",
           tickfont = f,
           titlefont = f,
@@ -245,6 +252,7 @@ spComb <- base::merge(sp,sp95,all.x=T)
 aggSpecsDF <- spComb
 aggSpecsDF <- aggSpecsDF[order(aggSpecsDF$freq,decreasing = T),]
 x <- list(title = "ASIH Code",
+          tickangle = -90,
           type = "category",
           tickfont = f,
           titlefont = f,
@@ -288,6 +296,7 @@ tpDF$Holotype <- tpDF$Holotype/1000
 tpDF$Holotype95 <- tpDF$Holotype95/1000
 
 x <- list(title = "ASIH Code",
+          tickangle = -90,
           type = "category",
           tickfont = f,
           titlefont = f,
@@ -316,6 +325,7 @@ export(pl,file ="../data/summary/figures/fig11.png",vheight = 1080 )
 ## need description
 
 x <- list(title = "ASIH Code",
+          tickangle = -90,
           type = "category",
           tickfont = f,
           titlefont = f,
@@ -378,6 +388,7 @@ skel <- preps[c(1,8)]
 skel <- skel[complete.cases(skel),]
 skel <- skel[order(skel$skeleton,decreasing = T),]
 x <- list(title = "ASIH Code",
+          tickangle = -90,
           tickfont = f,
           titlefont = f,
           type = "category",
@@ -432,6 +443,7 @@ media <- preps[c(1,5)]
 media <- media[complete.cases(media),]
 media <- media[order(media$media,decreasing = T),]
 x <- list(title = "ASIH Code",
+          #tickangle = -90,
           tickfont = f,
           titlefont = f,
           type = "category",
@@ -458,6 +470,7 @@ export(p4,file ="../data/summary/figures/fig16.png",vheight = 1080 )
 
 mDF <- read.csv("https://raw.githubusercontent.com/melanostomias/rstuff/master/data/summary/data/asih-by-mediarecords.csv",stringsAsFactors = F)
 x <- list(title = "ASIH Code",
+          #tickangle = -90,
           tickfont = f,
           titlefont = f,
           type = "category",
