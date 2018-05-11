@@ -76,7 +76,7 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(agrDF$FamilyCount,decreasing = T))
-y <- list(title = "Number of Unique Family Names",
+y <- list(title = "Number of Unique Family Name Values",
           tickfont = f,
           titlefont = f,
           showexponent = "none")
@@ -114,18 +114,18 @@ pl <- plot_ly(
         type = "bar",
         marker=list(color = "grey")) %>%
         add_trace(y = ~Paratype, name="Secondary Type",marker=list(color = "black")) %>%
-        layout(xaxis = x, yaxis = y,barmode="stack",margin=m,legend=l) %>%
-        add_annotations(x = tpDF[tpDF$Holotype<50,]$ASIHCode,
-                        y = tpDF[tpDF$Holotype<50,]$Holotype,
-                        text = tpDF[tpDF$Holotype<50,]$Holotype,
-                        xref = "x",
-                        yref = "y",
-                        showarrow = TRUE,
-                        arrowhead = 4,
-                        arrowsize = .5
-                        #ax = 20,
-                        #ay = -40
-                        )
+        layout(xaxis = x, yaxis = y,barmode="stack",margin=m,legend=l)# %>%
+        #add_annotations(x = tpDF[tpDF$Holotype<50,]$ASIHCode,
+        #                y = tpDF[tpDF$Holotype<50,]$Holotype,
+        #                text = tpDF[tpDF$Holotype<50,]$Holotype,
+        #                xref = "x",
+        #                yref = "y",
+        #                showarrow = TRUE,
+        #                arrowhead = 4,
+        #                arrowsize = .5
+        #                #ax = 20,
+        #                #ay = -40
+        #                )
 pl
 export(pl,file ="../data/summary/figures/fig6.png",vheight = 1080 )
 
@@ -175,7 +175,7 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryarray = sort(recComb$freq,decreasing = T)
           )
-y <- list(title = "Number of Records (millions)",
+y <- list(title = "Number of Records (thousands)",
           autotick = FALSE,
           ticks = "outside",
           tick0 = 0,
@@ -283,16 +283,20 @@ names(tpDF95) <- c("ASIHCode","Holotype95","Paratype95")
 tpDF <- base::merge(tpDF,tpDF95,all.x=T)
 tpDF <- tpDF[order(tpDF$Holotype,decreasing = T),]
 tpDF <- tpDF[!is.na(tpDF$Holotype95),]
+##Scale YAXIS now
+tpDF$Holotype <- tpDF$Holotype/1000
+tpDF$Holotype95 <- tpDF$Holotype95/1000
+
 x <- list(title = "ASIH Code",
           type = "category",
           tickfont = f,
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(tpDF$Holotype,decreasing = T))
-y <- list(title = "Number of Primary Type Records (thousdands)",
+y <- list(title = "Number of Primary Type Records (thousands)",
           tickfont = f,
-          titlefont = f,
-          showexponent = "none")
+          titlefont = f
+          )
 pl <- plot_ly(
         data = tpDF,
         x = ~ASIHCode,
@@ -346,6 +350,7 @@ preps <- read.csv("https://raw.githubusercontent.com/melanostomias/rstuff/master
 cs <- preps[c(1,3)]
 cs <- cs[complete.cases(cs),]
 cs <- cs[order(cs$clearAndStain,decreasing = T),]
+cs$clearAndStain <- cs$clearAndStain/1000
 x <- list(title = "ASIH Code",
           type = "category",
           tickangle = -90,
@@ -353,7 +358,7 @@ x <- list(title = "ASIH Code",
           titlefont = f,
           categoryorder = "array",
           categoryarray = sort(cs$clearAndStain,decreasing = T))
-y <- list(title = "Number of Specimen Records with Cleared and Stained Specimen Preparations",
+y <- list(title = "Number of Specimen Records with Cleared and Stained Specimen Preparations (thousands)",
           tickfont = f,
           titlefont = f)
 p1 <- plot_ly(
@@ -378,9 +383,10 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(skel$skeleton,decreasing = T))
-y <- list(title = "Number of Specimen Records with Skeletal Specimen Preparations",
+y <- list(title = "Number of Specimen Records with Skeletal Specimen Preparations (thousands)",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent="none")
 p2 <- plot_ly(
         data = skel,
         x = ~ASIHCode,
@@ -403,9 +409,10 @@ x <- list(title = "ASIH Code",
           type = "category",
           categoryorder = "array",
           categoryarray = sort(tiss$tissue,decreasing = T))
-y <- list(title = "Number of Specimen Records with Tissues",
+y <- list(title = "Number of Specimen Records with Tissues (thousands)",
           tickfont = f,
-          titlefont = f)
+          titlefont = f,
+          showexponent="none")
 p3 <- plot_ly(
         data = tiss,
         x = ~ASIHCode,
